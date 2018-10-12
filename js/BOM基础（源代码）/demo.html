@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+        window.onload=function(){
+			var  btn=document.getElementById("btn");
+			var  times=10;
+			var  timer=null;
+			btn.onclick=function(){
+				if(this.getAttribute("clicked")){return false;}
+				var _this=this;
+				timer=setInterval(function(){
+					times--;
+					if(times<=0){
+						clearInterval(timer);
+						_this.value="发送验证码";
+						//_this.disabled=false;
+						_this.removeAttribute("clicked",false);
+						times=10;
+					}else{
+                        _this.value=times+'秒后重试';
+						//_this.disabled=true;
+						_this.setAttribute("clicked",true);
+					}
+				},1000)
+			}
+		}
+	</script>
+</head>
+<body>
+
+<div class="box">
+	<input type="button" value="发送验证码" id="btn">
+</div>
+
+</body>
+</html>

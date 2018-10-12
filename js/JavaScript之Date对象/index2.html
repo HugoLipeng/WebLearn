@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        // 创建一个日期时间对象
+        var today=new Date();
+        //today.setFullYear(2017);
+        //today.setMonth(15);
+        //console.log(today.getFullYear());
+        //  50天之后是星期
+        // 第一种做法
+        //today.setDate(today.getDate()+50);
+        //console.log(today.getDay());
+        // 第二种做法
+        var weeks=["日","一","二","三","四","五","六"];
+        var year=today.getFullYear();
+        var month=today.getMonth();
+        var day=today.getDate();
+        // 创建了一个目标日期对象,年,月,日,时,分,秒
+        var temp=new Date(year+1,month,day);
+        console.log("50天后的今天是："+temp.getFullYear()+'-'+(temp.getMonth()+1)+'-'+temp.getDate()+'-'+'星期'+weeks[temp.getDay()]);
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	   // join
+	   var nums=[2,4,5];
+	   var str=nums.join();  //2,4,5 
+	   var words=["border","left","color"];
+	   // border-left-color
+	   var wordstr=words.join("-");
+	   console.log(wordstr);
+	   // reverse
+	   nums.reverse();
+	   console.log(nums);
+	   var strs=["a","b","c","d"];
+	   // 返回dcba这个字符串
+       var newstr=strs.reverse().join("")
+	   console.log(newstr);
+	   // 29,5,24,17,32
+	   var arr=[9,23,15,-99,88,12,-2];
+	   // 降序 return 参数1<参数2
+	   //arr.sort(function(a,b){return a<b});
+	   // 升序 return 参数1>参数2
+	   arr.sort(function(a,b){return a>b});
+	   console.log(arr);
+	</script>
+</body>
+</html>

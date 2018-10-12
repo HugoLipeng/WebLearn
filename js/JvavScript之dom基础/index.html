@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="box" id="box">
+		元素1
+	</div>
+	<ul id="list1">
+		<li>前端开发</li>
+		<li>服务器端开发</li>
+		<li>UI设计</li>
+	</ul>
+	<ol>
+		<li>javaScript原生</li>
+		<li>javaScript框架</li>
+	</ol>
+	<script>
+       // 获取id为box的这个元素
+       var box=document.getElementById("box");
+       console.log(box);
+       // 获取页面中所有的li
+       var lis=document.getElementsByTagName("li");
+       console.log(lis.length);
+       // 获取id为list1下的所有的li
+       var lis2=document.getElementById("list1").getElementsByTagName("li");
+       console.log(lis2.length);
+	</script>
+</body>
+</html>

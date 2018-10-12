@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+      var colors=['red','green','blue','yellow'];
+      var randomIndex=Math.floor(Math.random()*colors.length);
+      console.log(colors[randomIndex]);
+      // 从10到100之间随机生成10个整数，存入一个数组内
+      var nums=[];
+      function getRandom(n,m){
+         var choise=m-n+1;
+         return Math.floor(Math.random()*choise+n);
+      }
+      for(var i=0;i<10;i++){
+         // 生成一个随机数
+         var random=getRandom(10,100);
+         // 将生成的随机数放入数组内
+         nums.push(random);
+      }
+      console.log(nums.sort(function(a,b){return a>b}));
+	</script>
+</body>
+</html>

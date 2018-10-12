@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>判断成绩</title>
+</head>
+<body>
+	<script>
+       var score=prompt("请输入您的成绩");
+       var level="";
+       // 成绩的类型:如果成绩是非数字
+       if(isNaN(score)){
+          alert("成绩必须是数字");
+       }else{
+          if(score<0 || score>100){
+             alert("成绩输入有误！");
+          }else{
+             switch(parseInt(score/10)){
+                 case 0:
+                 case 1:
+                 case 2:
+                 case 3:
+                 case 4:
+                 case 5:
+                 level="不及格";
+                 break;
+                 case 6:
+                 level="及格";
+                 break;
+                 case 7:
+                 level="一般";
+                 break;
+                 case 8:
+                 level="良";
+                 break;
+                 case 9:
+                 level="优";
+                 break;
+                 default:
+                 level="满分";
+             }
+             alert("您的成绩是"+level);
+          }
+       }
+	</script>
+</body>
+</html>

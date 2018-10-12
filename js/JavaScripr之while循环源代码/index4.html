@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+       for(var i=0,col="";i<=100;i++){
+          switch(i%4){
+             case 0:
+             col="red";
+             break;
+             case 1:
+             col="green";
+             break;
+             case 2:
+             col="blue";
+             break;
+             default:
+             col="orange";
+          }
+          document.write('<font color="'+col+'">'+i+'</font><br>');
+       }
+	</script>
+</body>
+</html>

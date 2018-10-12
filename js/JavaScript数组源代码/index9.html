@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        var nums=[3,8,5,7,6];
+        var newNums=nums.map(function(item,index,array){
+            return item*2;
+        })
+        console.log(nums);
+        var strs=["display","transform","transition"];
+        var newstrs=strs.map(function(item,index,array){
+            return "-webkit-"+item;
+        })
+        console.log(newstrs);
+        var colors=["red","green","blue"];
+        colors.forEach(function(item,i,array){
+           console.log(item);
+        })
+	</script>
+</body>
+</html>

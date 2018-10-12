@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+      // 写一个函数，返回某个值在这个数组中出现了多少次
+      var nums=[8,2,5,6,8,6,7,9];
+      function getTimes(arr,num){
+         // 次数
+         var times=0,i;
+         // 遍历数组
+         for(i=0;i<arr.length;i++){
+            // 比较数组中的每一值是否和num相等
+            if(arr[i]==num){
+               // 次数+1
+               times+=1;
+            }
+         }
+         return times;
+      }
+      var times1=getTimes(nums,99);
+      var times2=getTimes(["a","c","a","d"],"a");
+      console.log(times1);
+      console.log(times2);
+      // 封装一个方法，实现reverse()的功能
+      // 数组翻转
+      function reverseArr(arr){
+         // 新数组
+         var newArr=[];
+         // 遍历数组，从最后一个值开始取
+        /* for(var i=arr.length-1;i>=0;i--){
+            // 将每一个值追加到新数组的最后
+            newArr.push(arr[i]);
+         }*/
+         for(var i=0;i<arr.length;i++){
+            newArr.unshift(arr[i])
+         }
+         return newArr;
+      }
+      var newArr1=reverseArr([1,2,4,9,6]);
+      var newArr2=reverseArr(["o","l","l","e","h"]);
+      console.log(newArr1);
+      console.log(newArr2.join(""));
+	</script>
+</body>
+</html>

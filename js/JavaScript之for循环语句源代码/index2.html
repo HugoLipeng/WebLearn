@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环嵌套</title>
+	<style>
+     body{
+     	text-align:left;
+     }
+	</style>
+</head>
+<body>
+	<script>
+	   /*for(var i=1;i<=3;i++){
+          document.write(i+'<br />');     // 1           2
+          document.write('<hr>');
+          for(var j=1;j<=5;j++){
+             document.write(j+'<br />');   // 1 2 3 4 5  1 2 3 4 5
+          }
+	   }*/
+	   // 外层决定了行数
+	  /* for(var i=1;i<=10;i++){
+          // 内层决定了每一行的星星个数
+          for(var j=1;j<=i;j++){
+             document.write('*');  // *   **
+          }
+          document.write("<br />")
+	   }*/
+
+	  /* for(var m=1;m<=6;m++){
+          for(var n=6;n>=m;n--){     // 6>=2   6>=3  
+             document.write('*');   // *****  ***** ****
+          }
+          document.write('<br />');
+	   }*/
+
+	   // 九九乘法表
+	   for(var i=1;i<=9;i++){      // i=1; j<=1;  i=2;
+          for(var j=1;j<=i;j++){
+             document.write(j+'*'+i+'='+j*i+'&nbsp;&nbsp;');   // 1*1=1  1*1=1 2*2=4
+          }
+          document.write('<br />');
+	   }
+	</script>
+</body>
+</html>

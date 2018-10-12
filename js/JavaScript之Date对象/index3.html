@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        function addZero(num){
+           if(num<10){
+              return '0'+num;
+           }else{
+              return num;
+           }
+        }
+        // 返回n天之后的日期时间对象
+        function get_date(n){
+           // 判断n,如果是未定义的，则返回当前日期，否则返回n天之后的日期
+           n=typeof(n)==="undefined"?0:n;
+           // 创建一个当前的日期时间对象
+           var date=new Date(),
+               times=date.getTime(),   // 到现在为止的毫秒数
+               tempDate=new Date(),    // 未来的一个日期对象
+               //times=date*1;  // 等价于getTime()隐式类型转换
+               tempTimes=times+86400000*n,
+               year,mon,day;
+           // 将tempTimes设置为当前
+           tempDate.setTime(tempTimes);
+           year=tempDate.getFullYear();
+           mon=addZero(tempDate.getMonth()+1);
+           day=addZero(tempDate.getDate());
+           return year+'-'+mon+'-'+day;
+        }
+        console.log(get_date(20));
+	</script>
+</body>
+</html>
