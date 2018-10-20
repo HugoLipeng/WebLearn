@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>函数的定义</title>
+</head>
+<body>
+<script>
+    // 三种定义方式
+    // 字面量
+    // 	function声明
+    // 		function add() {
+    // 			// body...
+    // 		}
+    // 		add();
+    // 	var赋值表达式
+    // 		var add = function (argument) {
+    // 			// body...
+    // 		};
+    // 		add();
+    // 		var add = function fn(argument) {
+    // 			// body...
+    // 			fn();
+    // 			add();
+    // 		};
+    // 		add();
+    // 		fn();X
+    // 构造函数
+    	// var add = new Function('num1', 'num2', 'return num1 + num2;');
+    	// add();
+
+    // 区别
+	// function add(num1) {
+	// // body...
+	// }
+	// var add = function () {
+	// 	// body...
+	// };
+	// var add = new Function('num1', 'num2', 'return num1 + num2;');
+	// 预加载
+	// console.log(add());
+	// function add() {
+	// 	return 1;
+	// }
+	// var num = 2;
+
+	// function
+	// var num = undefined;
+	// num = 2;
+
+	// console.log(add());
+	// var add = function () {
+	// 	return 1;
+	// };
+	// var add = undefined;
+
+	// 选择
+	// 构造函数
+	// function声明
+	// var赋值表达式
+	// var name = 'xm';
+	// var sex = 'male';
+	// var add = function () {
+
+	// };
+
+	// add();
+
+	// // ...
+	// // ...
+	// add();
+
+	// function add(argument) {
+	// 	// body...
+	// }
+
+	// 函数定义的位置
+	// 全局作用域
+	// add()
+	// function add() {
+	// 	// body...
+	// 	add()
+	// }
+	// add()
+
+	// function subtract(argument) {
+	// 	add()
+	// }
+
+	// 函数作用域
+	// fn()X
+	// function add() {
+	// 	fn();
+	// 	function fn() {
+	// 		fn()
+	// 		function fn3(argument) {
+	// 			fn()
+	// 		}
+	// 		// body...
+	// 	}
+	// 	function fn2() {
+	// 		fn();
+	// 		// body...
+	// 	}
+	// }
+	// fn()X
+
+	// if/for
+	// if (true) {
+	// 	function add(argument) {
+	// 		// body...
+	// 	}
+	// } else {
+	// 	function subtract(argument) {
+	// 		// body...
+	// 	}
+	// }
+
+// 	if (true) {
+// 		var add = function (argument) {
+// 			// body...
+// 		}
+// 	} else {
+// 		var subtract = function (argument) {
+// 			// body...
+// 		}
+// 	}
+// 	add = undefined;
+// 	subtract = undefined;
+// add = function (argument) {
+// 	// body...
+// }
+	// 对象
+	var person = {
+		name: 'xm',
+		setSex: function (sex) {
+			this.sex = sex;
+		}
+	};
+	person.setName = function (name) {
+		this.name = name;
+	}
+	person.setSex();
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

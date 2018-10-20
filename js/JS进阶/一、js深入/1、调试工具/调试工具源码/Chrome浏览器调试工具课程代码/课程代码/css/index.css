@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+*{margin:0;padding:0;}
+
+body{font: 20px/1.5 '微软雅黑';color:#333;}
+
+.hide{display:none;}
+.show{display:block;}
+
+.title{font-weight:bold;}
+
+.content
+{
+	text-align:center;
+	padding:50px;
+}
+
+.btn
+{
+	padding:8px 20px;
+	margin:10px;
+	background:#e40;
+	color:#fff;
+	border:1px solid #f40;
+	border-radius:3px;
+	box-shadow:2px 2px 2px #888;
+	outline:none;
+}
+.btn:hover
+{
+	cursor:pointer;
+	background:#f60;
+}
