@@ -306,6 +306,7 @@ dt、dd都是容器级标签，想放什么都可以。所以，现在就应该�
 ```
 上面的表格中没有加文字，所以在生成的网页中什么都看不到。
 例如，3行4列的单元格：
+
 ```html
 	<table>
 		<tr>
@@ -331,6 +332,7 @@ dt、dd都是容器级标签，想放什么都可以。所以，现在就应该�
 
 	</table>
 ```
+
 效果：
 
 ![](http://img.smyhvae.com/2015-10-02-cnblogs_html_10.png)
@@ -829,7 +831,7 @@ text就是“文本”，area就是“区域”。
 
 **声明：**
 多媒体包含：音频、视频、Flash。网页上的多媒体基本都是Flash格式的。
-.wmv、.dat、.mob、.rmvb等视频格式，在网页上不能直接播放，需要安装第三方的插件，才可以播放。不同的浏览器，播客上述视频格式，所使用插件参数又不一样。
+.wmv、.dat、.mob、.rmvb等视频格式，在网页上不能直接播放，需要安装第三方的插件，才可以播放。不同的浏览器，播放上述视频格式，所使用插件参数又不一样。
 上述格式视频一般文件较大，不利于网络下载播放。
 一般情况下，是将其它的视频格式，转成Flash来在网页上播放。转换软件：格式工厂等。
 Flash格式的视频兼容性非常好，Flash格式的文件很小。
@@ -841,6 +843,7 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。
  - `loop="-1"`：属性值代表播放次数，-1代表循环播放。
 
 举例：
+
 ```html
  <body>
 	<bgsound src="王菲 - 清风徐来.mp3"></bgsound>
@@ -869,6 +872,7 @@ Flash格式的视频兼容性非常好，Flash格式的文件很小。
 
 
 `<embed>`标签播放音频举例：
+
 ```html
  <body>
 	<embed src="王菲 - 清风徐来.mp3"></embed>
@@ -897,6 +901,7 @@ google浏览器中的运行效果：
 
 **总结：在网页中插入Flash时，为了同时兼容多种浏览器，需要将`<object>`标签和`<embed>`标签标记一起使用，但使用的顺序是：`<object>`中嵌套`<embed>`标记。**
 举例：
+
 ```html
 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="778" height="202">
   <param name="movie" value="images/banner.swf">
@@ -922,6 +927,7 @@ google浏览器中的运行效果：
  - `scrolldelay="1000"`：移动一次休息多长时间。单位是毫秒。
 
 举例：
+
 ```html
 	<marquee behavior="alternate" direction="down"  width="300" height="200" bgcolor="#8c5dc1">我来了</marquee>
 ```
@@ -979,10 +985,4 @@ div  p  h1  span   a   img   ul   ol    dl    input
 知道每个标签的特殊用法、属性。比如a标签，img的属性。
 
 
-## 我的公众号
 
-想学习<font color=#0000ff>**代码之外的软技能**</font>？不妨关注我的微信公众号（生命团队id：`vitateam`）。
-
-扫一扫，你将发现另一个全新的世界，而这将是一场美丽的意外：
-
-![](http://img.smyhvae.com/cnblogs/%E7%94%9F%E5%91%BD%E5%9B%A2%E9%98%9F%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg)
