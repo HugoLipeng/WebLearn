@@ -8,3 +8,8 @@ web learning Doc and Code
 [ES6](https://blog.csdn.net/jianghao233/article/category/7633890)  
 [Vue](https://blog.csdn.net/column/details/25767.html)  
 
+
+
+[踩坑笔记](https://www.jianshu.com/p/c8c161df77a9)  
+
+[用 JS 写小游戏](https://space.bilibili.com/39066904/#/channel/detail?cid=21254)
