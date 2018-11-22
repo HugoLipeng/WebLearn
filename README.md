@@ -8,7 +8,7 @@ web learning Doc and Code
 [ES6](https://blog.csdn.net/jianghao233/article/category/7633890)  
 [Vue](https://blog.csdn.net/column/details/25767.html)  
 
-
+[深入理解JavaScript系列](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)  
 
 [踩坑笔记](https://www.jianshu.com/p/c8c161df77a9)  
 
