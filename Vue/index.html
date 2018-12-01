@@ -9,14 +9,25 @@
 
 <body>
     <div id='app'>
-        <p>{{ message }}</p>
+        <input type="text" v-model="inputValue"/>
+        <button v-on:click="handleBtnClick">提交</button>
+        <ul>
+            <li v-for="item in list">{{item}}</li>
+        </ul>
     </div>
 
     <script>
     new Vue({
         el: '#app',
         data: {
-        message: 'Hello Vue.js!'
+            list:[],
+            inputValue:''
+        },
+        methods:{
+            handleBtnClick: function(){
+                this.list.push(this.inputValue)
+                this.inputValue =''
+            }
         }
     })
 </script>
