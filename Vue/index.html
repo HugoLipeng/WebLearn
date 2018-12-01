@@ -8,17 +8,24 @@
 </head>
 
 <body>
-    <div id='app'>
+    <div id='root'>
         <input type="text" v-model="inputValue"/>
         <button v-on:click="handleBtnClick">提交</button>
         <ul>
-            <li v-for="item in list">{{item}}</li>
+            <todo-item v-bind:content="item" v-for="item in list">
+            </todo-item>
         </ul>
     </div>
 
     <script>
-    new Vue({
-        el: '#app',
+    
+    Vue.component("TodoItem",{
+        props:['content'],
+        template:"<li>{{content}}</li>"
+    })
+
+    var app = new Vue({
+        el: '#root',
         data: {
             list:[],
             inputValue:''
