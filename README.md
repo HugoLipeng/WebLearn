@@ -12,4 +12,6 @@ web learning Doc and Code
 
 [踩坑笔记](https://www.jianshu.com/p/c8c161df77a9)  
 
-[用 JS 写小游戏](https://space.bilibili.com/39066904/#/channel/detail?cid=21254)
+[用 JS 写小游戏](https://space.bilibili.com/39066904/#/channel/detail?cid=21254)  
+
+[CSS样式大全](https://lhammer.cn/You-need-to-know-css/#/)
