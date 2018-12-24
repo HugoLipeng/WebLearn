@@ -15,3 +15,5 @@ web learning Doc and Code
 [用 JS 写小游戏](https://space.bilibili.com/39066904/#/channel/detail?cid=21254)  
 
 [CSS样式大全](https://lhammer.cn/You-need-to-know-css/#/)
+
+[frontend-tech-list](https://alienzhou.github.io/frontend-tech-list/)
