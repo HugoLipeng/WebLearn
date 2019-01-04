@@ -1,3 +1,5 @@
+[chrome使用技巧（看了定不让你失望）](http://www.cnblogs.com/liyunhua/p/4544738.html)  
+
 
 
 ### show user agent shadow DOM
