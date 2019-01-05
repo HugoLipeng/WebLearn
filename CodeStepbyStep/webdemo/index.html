@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hugo</title>
+    <!--<link rel="stylesheet" type="text/css" href="./css/index.css" />-->
+    <style type="text/css">
+        hr {color: sienna;}
+        p {margin-left: 20px;}
+        /*body {*/
+            /*background:url("images/zoro.jpg") top center no-repeat;*/
+            /*background-size: cover;*/
+            /*!*background-position:center;*!*/
+            /*!*background:100% 100%;*!*/
+        /*}*/
+        /*.hugo{*/
+            /*height: 570px;*/
+            /*width: 100%;*/
+            /*background:url("images/zoro.jpg") top center no-repeat;*/
+            /*background-size: cover;*/
+        /*}*/
+        .sekuai1{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            top: 20px;
+            left:10px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div class="sekuai1" id = "sekuai"></div>
+<script>
+    var step = 10;
+   function start() {
+       setTimeout(function () {
+           var move = document.getElementById("sekuai");
+           move.style.left = step+"px";
+           step = step+1;
+           if(step>220) return;
+           start();
+       },10);
+   }
+
+
+    start();
+</script>
+
+</body>
+</html>
