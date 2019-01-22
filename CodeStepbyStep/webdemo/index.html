@@ -24,27 +24,46 @@
             width: 100px;
             height: 100px;
             top: 20px;
-            left:10px;
+            left: 10px;
             position: absolute;
+        }
+        a:link{
+            color:red;
+        }
+        a:visited{
+            color:orange;
+        }
+        a:hover{
+            color:green;
+        }
+        a:active{
+            color:black;
         }
     </style>
 </head>
 <body>
-<div class="sekuai1" id = "sekuai"></div>
+<!--<div class="sekuai1" id = "sekuai"></div>-->
+<a href="http://pic.yunlianjia.cn/banner.jpg" >test</a>
 <script>
-    var step = 10;
+
+
    function start() {
-       setTimeout(function () {
-           var move = document.getElementById("sekuai");
-           move.style.left = step+"px";
-           step = step+1;
-           if(step>220) return;
-           start();
-       },10);
+       for(var i=20;i<25;i++){
+           var move= document.getElementById("sekuai");
+           move.style.left = i +"px";
+       }
+       // var step = 10;
+       // setTimeout(function () {
+       //     var move = document.getElementById("sekuai");
+       //     move.style.left = step+"px";
+       //     step = step+1;
+       //     if(step>220) return;
+       //     start();
+       // },10);
    }
 
 
-    start();
+    // start();
 </script>
 
 </body>
