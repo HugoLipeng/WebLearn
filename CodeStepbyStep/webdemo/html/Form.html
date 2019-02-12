@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="http://www.baidu.com" method="get">
+    用户名：<input type="text" name="username" value="123456" /><br />
+    密码：<input type="password" name="password" value="123456"/><br />
+    确认密码：<input type="password" name="repassword" value="123456" /><br />
+    性别：男 <input type="radio" name="sex" value="nan" />
+    女 <input type="radio" name="sex" value="nv" /><br />
+    爱好：<input type="checkbox" name="love" value="1" />吃
+    <input type="checkbox" name="love" value="2" />喝
+    <input type="checkbox" name="love" value="3" />玩
+    <input type="checkbox" name="love" value="4" />乐 <br />
+
+    <hr />
+    <textarea rows="10" cols="30">
+这是一个文本域
+</textarea>
+    <hr />
+    下拉菜单
+    <select name="爱好">
+        <option value="chi" value="1">吃</option>
+        <option value="he" value="2">喝</option>
+        <option value="wan" value="3" selected="selected">玩</option>
+        <option value="le" value="4">乐</option>
+    </select>
+    <hr />
+    <fieldset>
+        <legend>健康信息</legend>
+        身高：<input type="text" />
+        体重：<input type="text" />
+    </fieldset>
+    <button>button提交</button>
+    <input type="button" value="input_button 提交"/>
+    <input type="submit" value="input_submit 提交" />
+</form>
+</body>
+</html>
