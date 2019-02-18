@@ -1,6 +1,10 @@
 # WebLearn
 web learning Doc and Code
 
+[2019年Web前端入门的自学路线](https://www.cnblogs.com/smyhvae/p/8776837.html)  
+
+[支付宝前端团队写的《Web 前端开发入门手册》](https://www.yuque.com/fe9/basic)  
+
 
 [深入理解JavaScript系列](http://www.cnblogs.com/TomXu/archive/2011/12/15/2288411.html)  
 

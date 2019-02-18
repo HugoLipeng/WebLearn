@@ -1,3 +1,6 @@
+[2019年Web前端入门的自学路线](https://www.cnblogs.com/smyhvae/p/8776837.html)
+
+
 一、HTML、CSS基础、JavaScript语法基础。学完基础后，可以仿照电商网站（例如京东、小米）做首页的布局。
 
 二、JavaScript语法进阶。包括：作用域和闭包、this和对象原型等。相信我，JS语法，永远是面试中最重要的部分。
