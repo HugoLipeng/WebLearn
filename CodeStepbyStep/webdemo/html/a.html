@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/a.css">
+    </link>
+    <title>test css link</title>
+</head>
+
+<body>
+    <p>测试CSS样式</p>
+    <p style="color: blue">行内样式</p>
+    <!-- 问题：到底用id还是用class？
+        答案：CSS尽可能的用class，除非极特殊的情况可以用id。
+        原因：id是js用的。也就是说，js要通过id属性得到标签，所以css层面尽量不用id，要不然js就很别扭。另一层面，我们会认为一个有id的元素，有动态效果。 -->
+    <p class="lv da">段落一</p>
+    <p class="lv underline">段落二</p>
+    <p class="da underline">段落三</p>
+    <!-- 类上样式，id上行为。意思是说，class属性交给css使用，id属性交给js使用。 -->
+    <h3>我就是<b>那一只<i>披着羊皮的狼，</i>而你是</b>我的猎物</h3>
+    <h3 class="special zhongyao">标题1</h3>
+    <a href="http://www.baidu.com">百度</a>
+
+    <div class="nav">
+        <ul>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+            <li><a href="#">网站栏目</a></li>
+        </ul>
+    </div>
+
+    <input type="text" name=""><br><br>
+    <label>就是任性</label>
+
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div class="hezi">
+        <ul>
+            <li class="teshu">文字</li>
+            <li>文字</li>
+            <li>文字</li>
+            <li>文字</li>
+            <li>文字</li>
+            <li>文字</li>
+            <li>文字</li>
+            <li>文字</li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    border: 1px solid red;
+    font-size: 40px;
+}
+
+.lv{
+    color: green;
+}
+.da{
+    font-size: 30px;
+}
+.underline{
+    text-decoration: underline;
+}
+
+/* 后代选择器 */
+h3 i{
+    color: red;
+}
+
+/* 交集选择器  */
+h3.special{
+    color:red;
+}
+
+/* 并集选择器 */
+p,h1,#mytitle,.one{
+    color:red;
+}
+
+/*让超链接点击之前是红色*/
+a:link{
+    color:red;
+}
+
+/*让超链接点击之后是绿色*/
+a:visited{
+    color:orange;
+}
+/*鼠标悬停，放到标签上的时候*/
+a:hover{
+    color:green;
+}
+/*鼠标点击链接，但是不松手的时候*/
+a:active{
+    color:black;
+}
+
+.nav{
+    width: 960px;
+    height: 50px;
+    border: 1px solid red;
+    margin: 100px auto;
+}
+.nav ul{
+    /*去掉小圆点*/
+    list-style: none;
+}
+.nav ul li{
+    float: left;
+    width: 120px;
+    height: 50px;
+    /*让内容水平居中*/
+    text-align: center;
+    /*让行高等于nav的高度，就可以保证内容垂直居中*/
+    line-height: 50px;
+}
+.nav ul li a{
+    display: block;
+    width: 120px;
+    height: 50px;
+}
+/*两个伪类的属性，可以用逗号隔开*/
+.nav ul li a:link , .nav ul li a:visited{
+    text-decoration: none;
+    background-color: purple;
+    color:white;
+}
+.nav ul li a:hover{
+    background-color: orange;
+}
+
+
+/*
+    伪类选择器：动态伪类
+  */
+
+   /*
+    让文本框获取焦点时：
+    边框：#FF6F3D这种橙色
+    文字：绿色
+    背景色：#6a6a6a这种灰色
+*/
+input:focus{
+    border:3px solid #FF6F3D;
+    color:white;
+    background-color:#6a6a6a;
+}
+
+/*
+鼠标放在标签上时显示蓝色
+*/
+label:hover{
+    color:blue;
+}
+
+/*
+点击标签鼠标没有松开时显示红色
+*/
+label:active{
+    color:red;
+}
+
+
+
+/*整个表格的样式*/
+table{
+    width: 300px;
+    height: 200px;
+    border: 1px solid blue;
+    /*border-collapse属性：对表格的线进行折叠*/
+    border-collapse: collapse;
+}
+
+/*鼠标悬停时，让当前行显示#868686这种灰色*/
+table tr:hover{
+    background: #868686;
+}
+
+/*每个单元格的样式*/
+table td{
+    border:1px solid red;
+}
+
+.hezi ul li{
+    color:blue;
+}
+.hezi ul li.teshu{
+    color:red;
+}
