@@ -143,3 +143,27 @@ table td{
 .hezi ul li.teshu{
     color:red;
 }
+
+.sanjiao{
+    width: 0px;
+    height: 0px;
+    border: 50px solid white;
+    border-top-color: red;
+    border-bottom: none;
+}
+
+.div1{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}
+
+.div2{
+    position: relative;
+    left: 50px;
+    top: 50px;
+
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+}
