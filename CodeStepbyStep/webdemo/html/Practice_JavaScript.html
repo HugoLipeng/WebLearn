@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <button>按钮</button>
     <script type="text/javascript">
         // alert("hugo for javascript");
         console.log("写技术博客的人最厉害！");
@@ -269,7 +270,19 @@
         console.log(myDate.getMilliseconds());
         console.log(myDate.getTime());
         
-        
+        var btn = document.getElementsByTagName("button")[0];
+        //addEventListener: 事件监听器。 原事件被执行的时候，后面绑定的事件照样被执行
+        //第二种事件绑定的方法不会出现层叠。（更适合团队开发）
+        btn.addEventListener("click",fn1);
+        btn.addEventListener("click",fn2);
+
+        function fn1() {
+            console.log("事件1");
+        }
+
+        function fn2() {
+            console.log("事件2");
+        }
         
         
         
