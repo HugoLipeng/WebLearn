@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>作用域和闭包</title>
+    <script type="text/javascript">
+        fun1(); //不会报错，可以正常执行函数
+        // fun2(); //会报错，此时fun2等于 underfined
+
+        // 函数声明，会被提前声明
+        function fun1() {
+            console.log("我是一个fun函数");
+        }
+
+        // “函数表达式”创建的函数，此时内部函数的声明并没有提前
+        var fun2 = function () {
+            console.log("我是fun2函数")
+        }
+
+        var a = 1;
+
+        function foo() {
+            console.log(a);
+            a = 2;     // 此处的a相当于window.a
+        }
+
+        foo();
+        console.log(a);   //打印结果是2
+
+
+        //只要是函数就可以创造作用域
+        //函数中又可以再创建函数
+        //函数内部的作用域可以访问函数外部的作用域
+        //如果有多个函数嵌套，那么就会构成一个链式访问结构，这就是作用域链
+
+        //f1--->全局
+        function f1() {
+            //f2--->f1--->全局
+            function f2() {
+                //f3---->f2--->f1--->全局
+                function f3() {
+                }
+                //f4--->f2--->f1---->全局
+                function f4() {
+                }
+            }
+            //f5--->f1---->全局
+            function f5() {
+            }
+        }
+
+
+
+
+        var a = 1
+
+        function fn1() {
+            var b = 2
+
+            function fn2() {
+                var c = 3
+                console.log(c)
+                console.log(b)
+                console.log(a)
+                console.log(d)
+            }
+            fn2()
+        }
+        fn1()
+    </script>
+</head>
+
+</html>
