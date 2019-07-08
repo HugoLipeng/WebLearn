@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head en="en">
+        <meta charset="UTF-8">
+        <title>jquery demo 1</title>
+        <style>
+            div{
+                height: 100px;
+                background-color: pink;
+                margin: 10px;
+                display: none;
+            }
+        </style>
+
+        <script src="../javascript/jquery-3.4.1.min.js"></script>
+
+        <script>
+            // window.onload = function() {
+            //     var btn = document.getElementsByTagName("button")[0];
+            //     var divArr = document.getElementsByTagName("div");
+
+            //     btn.onclick = function(){
+            //         for (let i = 0; i< divArr.length; i++) {
+            //             divArr[i].style.display = "block";
+            //             divArr[i].innerHTML = "HUGO";
+            //         }
+            //     }
+            // }
+            $(document).ready(function(){
+                    var jQbtn = $("button");
+                    var jQdiv = $("div");
+
+                    jQbtn.click(function(){
+                        // alert("hihihi");
+                        jQdiv.show(1000);
+                        jQdiv.html("tommorrow! ");
+                    });
+                });
+        </script>
+    </head>
+    <body>
+        <button>显示五个div盒子和设置内容</button>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>
