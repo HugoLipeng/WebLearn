@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!--
+1.作用：提交数据
+表格：存放数据
+
+属性：
+name     表单名称
+action   提交的地址
+method   提交的方法
+get   默认值
+post
+get和post的区别：
+1.get提交数据不安全，信息会在地址栏中显示，post相对安全
+2.get提交的数据有限制，最大为2kb，post理论上数据没有限制
+
+
+2.输入框
+input属性
+type   类型
+name   输入框的名称
+value   当前值
+
+3.单选按钮和多选按钮默认被选中
+checked
+
+4.下拉列表默认被选中
+option加  selected
+
+5.禁用和只读
+disabled   禁用
+readonly   只读
+
+-->
+<form name="myForm" >
+    姓名：<input type="text" name="userName" value="请输入您的用户名"/>
+    <br/><br/>
+    密码：<input type="password" name="psd" value="请输入您的密码"/>
+    <br/><br/>
+    性别：<input type="radio" name="sex"/>男 <input type="radio" name="sex"/>女
+          <input type="radio" name="sex"/>人妖
+    <br/><br/>
+    爱好：<input type="checkbox"/>吃 <input type="checkbox"/>睡觉 <input type="checkbox"/>喝 <input type="checkbox"/>看球
+    <br/><br/>
+    <input type="submit" value="登录"/>
+    <input type="reset" value="取消"/>
+    <input type="button" value="普通按钮"/>
+    <button>提交按钮</button>
+    <button type="reset">重置按钮</button>
+    <button type="button">普通按钮</button>
+    <input type="image" src="images/pic3.gif"/>
+</form>
+
+</body>
+</html>
