@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>HTML常用标签</title>
+</head>
+
+<body>
+    <!--
+1.标题标签
+
+h1-h6
+双标记，块级元素
+
+align   内容水平对齐方式
+默认值  left  居左
+right   居右
+center   居中
+
+
+2.块级元素和行内元素
+
+<h1>         一号标题         </h1>
+元素的开始   元素的内容     元素的结束
+
+块级元素和行内元素的区别：
+1）块级元素独占一行，行内元素在同一行显示
+2）块级元素默认宽度为100%，行内元素由内容撑开
+
+3.段落
+<p></p>
+双标记，块级元素
+
+有align属性
+
+
+4.图片
+img
+
+src  路径  必须属性
+
+相对路径
+同一等级   直接书写
+下一级    /
+上一级   ../
+上两级   ../../
+
+
+绝对路径
+
+
+
+alt   当图片不能正常显示，给予提示
+title   当鼠标悬停，给予提示
+
+width   宽
+height    高
+
+
+html中默认单位为像素   px
+
+
+-->
+
+    <h1 align="right">一号标题</h1>
+    <h2 align="center">二号标题</h2>
+    <h3>三号标题</h3>
+    <h4>4号标题</h4>
+    <h5>5号标题</h5>
+    <h6>6号标题</h6>
+
+
+    <p align="center">居中段落</p>
+    <p title="这是段落元素">段落</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam consectetur eius est illo, in ipsum
+        libero molestiae nam nemo possimus quibusdam sapiente voluptatum. Blanditiis ducimus exercitationem quis sunt
+        voluptates.</p>
+
+
+    <!--图片-->
+    <img src="http://www.daliandaily.com.cn/news/content/images/attachement/jpg/site102/20180423/A091524417569993_change_A09B423Ab001.jpg"
+        alt="" />
+
+    <img src="../images/pic1.jpg" alt="当图片不能正常显示，给予提示" title="这是辽宁夺冠庆祝照" width="200" />
+
+    <img src="../images/pic2.jpg" alt="赵继伟" />
+
+    <img src="../images/pic3.gif" alt="" />
+
+    <!--
+1.强制换行  
+<br/>
+没有任何属性
+
+2.水平线
+<hr/>
+块级元素
+
+color:颜色
+size：线的高度
+width:线的长度
+align:默认值为center
+
+3.超链接
+<a></a>
+双标记，行内元素
+
+href   路径
+target   跳转窗口
+默认值 _self   原窗口打开
+_blank   新窗口打开
+
+
+空链接
+href="#"
+返回网页顶部
+
+锚点：
+1.点击a跳转到a
+<a href="#name">点击</a>
+<a href="" name="name">跳转到</a>
+
+2.点击a跳转到div
+<a href="#name">点击</a>
+<div id="name">跳转到</div>
+
+-->
+    <img src="../images/pic1.jpg" alt="" />
+    <br />
+    辽宁夺冠，队长杨鸣拿冠军鼎
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br /> At eum fugiat harum impedit in quos. <br />Alias
+        consectetur debitis ipsa iste laboriosam pariatur possimus qui? A aliquid atque dolores vitae voluptatem.</p>
+
+    <!--hr-->
+    <hr size="30" color="red" width="200" align="left" />
+    <hr size="30" color="red" width="200" align="left" />
+
+    <!--a-->
+    <a href="http://www.baidu.com" target="_blank">百度</a>
+
+    <a href="winter.html">相对路径跳转</a>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!--空链接-->
+    <a href="#">空链接</a>
+</body>
+
+</html>
