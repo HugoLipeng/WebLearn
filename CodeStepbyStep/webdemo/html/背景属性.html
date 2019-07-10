@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>背景属性</title>
+    <style>
+        body{
+            height: 1000px;
+            /*背景颜色   默认为透明  transparent*/
+            background-color: red;
+            /*background-color: #ff0000;*/
+            /*background-color: rgb(255,0,0);*/
+            /*background-color: rgba(255,0,0,.5);*/
+            
+            /*背景图片 默认水平垂直平铺*/
+            /*background-image: url("images/pic2.jpeg");*/
+
+            /*背景图片平铺*/
+            /*background-repeat: no-repeat;*/
+            /*background-repeat: repeat-x;*/
+            /*background-repeat: repeat-y;*/
+
+            /*背景图片的大小*/
+            /*background-size:1000px ;*/
+            /*background-size: 100% 100%;*/
+
+            /*背景图片固定*/
+            /*background-attachment:fixed ;*/
+
+            background:red  url("../images/pic2.jpeg") no-repeat fixed ;
+            background-size: 100% 100%;
+        }
+        .box{
+            width: 800px;
+            height: 600px;
+            /*background-color: rgba(255,255,255,.5);
+            background-image: url("images/pic1.jpg");
+            background-repeat: no-repeat;*/
+            /*background-size: contain;*/
+
+            background: rgba(255,255,255,.5) url("../images/pic1.jpg") no-repeat;
+
+
+            /*背景图片定位*/
+            /*background-position: x y;*/
+            /*当只有水平方向，垂直方向默认居中*/
+            /*background-position: 30px 30px;*/
+            /*background-position: 30px;*/
+            /*background-position: right bottom;*/
+            /*background-position: center;*/
+
+
+            /*简写为*/
+            /*background：颜色 图片 平铺 大小  定位 固定;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
