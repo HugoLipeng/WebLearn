@@ -1,0 +1,46 @@
+/*热卖推荐样式开始*/
+.hot{
+    width: 100%;
+    background-color: #e5e5e5;
+    overflow: hidden;
+}
+.hot_wrap{
+    width: 1190px; ;
+    margin: 0 auto;
+}
+.left{
+    width: 305px;
+    height: 785px;
+    float: left;
+}
+.right{
+    width: 885px;
+    height: 785px;
+    float: left;
+}
+.right>div{
+    width: 290px;
+    height: 390px;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.right img{
+    width: 120px;
+    margin-top: 20px;
+}
+.right h3{
+    font-weight: normal;
+    margin-top: 15px;
+}
+.right p{
+    color: #9E9E9E;
+    margin: 10px 0 20px 0;
+}
+.right span{
+    color: #ff6700;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+/*热卖推荐样式结束*/
