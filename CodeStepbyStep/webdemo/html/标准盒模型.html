@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标准盒模型</title>
+    <style>
+        /*
+        1.标准盒模型（w3c盒模型）
+        组成部分：content+padding+border+margin
+                  内容    内边距  边框  外边距
+        实际宽度：width+padding+border+margin
+
+       2.border  边框
+
+       border-style:solid|dotted|dashed|none|double;
+                    实线   点线   虚线   无   双线
+
+       border-color:;  边框的颜色  默认为黑色
+       border-widht:;  边框的粗细  默认为3px
+
+       简写：border:width style color;   顺序可以调换
+
+       单边属性：
+       border-top:1px solid red;
+       border-bottom:;
+       border-left:;
+       border-right:;
+
+       3.外边距  margin  可以取值auto,负值，正值
+       盒子距盒子之间的距离
+       透明的
+       margin:value;  四周的距离
+       margin:value value;  上下   左右
+       margin:0 auto;  水平居中块级元素
+       margin:value value value;  上   左右   下
+       margin:value value value value;  上   右   下   左
+
+       单边属性：
+       margin-top:;
+       margin-bottom:;
+       margin-left:;
+       margin-right:;
+
+
+       1）垂直方向上，外边距相撞，取较大值（浮动元素不会合并）
+       2）块级元素的margin-top问题
+       解决：
+       1.父元素加overflow:hidden;
+       2.父元素或者子元素浮动
+       3.父元素加边框  border:1px solid transpartent;
+       4.父元素加padding-top:1px;
+
+
+       4.内边距  padding  不可以取负值和auto
+       会撑大容器
+        padding:value;  四周的距离
+       padding:value value;  上下   左右
+       padding:value value value;  上   左右   下
+       padding:value value value value;  上   右   下   左
+
+
+        单边属性：
+       padding-top:;
+       padding-bottom:;
+       padding-left:;
+       padding-right:;
+
+
+
+
+
+
+        */
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /*padding-top: 1px;*/
+            /*border: 1px solid transparent;*/
+            /*float: left;*/
+            /*overflow: hidden;*/
+            /*border-style:dotted;
+            border-color: red;
+            border-width: 2px;*/
+            /*border: solid red 2px ;*/
+            /*border: 2px dotted;*/
+            /*border: none;*/
+            /*border-top: 5px solid green;*/
+            /*border-bottom-color: yellow;*/
+
+            /*margin:20px 30px;*/
+            /*margin: 0 auto;*/
+            /*margin: -20px;*/
+
+            /*margin: 10px 20px 30px;*/
+
+            /*margin: 10px 20px 30px 40px;*/
+            /*margin: 30px;*/
+            /*margin-top: 50px;*/
+        }
+        .one{
+            margin-bottom: 50px;
+            /*float: left;*/
+        }
+        .two{
+            margin-top: 100px;
+            /*float: left;*/
+        }
+        /*.partent{*/
+            /*width: 304px;*/
+        /*}*/
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 30px;
+            /*float: left;*/
+        }
+        .container{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            border: 10px dotted red;
+            margin: 50px;
+            padding: 50px;
+            padding-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<!--<div class="partent">
+    <div class="box one"></div>
+    <div class="box two"></div>
+</div>-->
+<!--<div class="box">
+    <div class="box1"></div>
+</div>-->
+
+<div class="container"></div>
+</body>
+</html>
