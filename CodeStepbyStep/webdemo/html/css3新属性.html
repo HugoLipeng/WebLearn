@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css3新属性</title>
+    <style>
+        /*
+        1.圆角
+        border-radius:value;   四个角
+        border-radius:value value;   左上角，右下角    右上角，左下角
+        border-radius:value value value;
+        border-radius:value value value value; 顺时针转，左上角开始
+        border-radius: 50%;  画圆
+
+        2.盒阴影
+        box-shadow:水平方向的位置 垂直方向的位置 模糊度  扩展值 颜色 位置;
+                       正负            正负      正值    正负         默认  外阴影  outset
+                                                                      inset  内阴影
+
+
+        3.字阴影
+        text-shadow:水平方向的位置 垂直方向的位置   模糊度  颜色;
+                        正负            正负         正值
+
+
+
+        */
+        .box{
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            /*border-radius: 20px 20px 0 0;*/
+            /*border-radius: 50%;*/
+            /*border-radius: 50px;*/
+            /*border-radius: 10%;*/
+            border-radius: 10px;
+            /*box-shadow:10px 10px 10px 5px rgba(255,0,0,.5) inset;*/
+            box-shadow: 0 15px 30px red;
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 15px -10px 2px red;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            margin: 100px;
+            box-shadow: 0 0 30px 10px gold;
+
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    下课吃饭
+</div>
+<div class="box1"></div>
+</body>
+</html>
