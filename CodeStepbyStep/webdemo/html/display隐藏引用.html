@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>display</title>
+    <style>
+        li{
+            list-style-type: none;
+            float: left;
+            background-color: pink;
+            padding: 20px 30px;
+        }
+        a{
+            text-decoration: none;
+            color: #333;
+        }
+        .hidden{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            display: none;
+        }
+        li:hover>.hidden{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <a href="#">首页</a>
+        <div class="hidden"></div>
+    </li>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">首页</a></li>
+</ul>
+</body>
+</html>
