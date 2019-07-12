@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>转换</title>
+    <style>
+        /*
+        1.转换
+        使元素在形状上或者位置发生一定的改变
+        属性：transform:;
+        1)位移
+        transform:translate(x,y)
+        当只取一个值，代表水平方向，两个值，代表水平方向和垂直方向
+        右下为正，可取负值
+
+        transform: translateX();  水平方向位移
+        transform: translateY();  垂直方向位移
+
+        2）旋转
+        transform:rotate(deg);
+        取正值，顺时针旋转，负值，逆时针旋转
+        旋转会旋转整个坐标轴
+        默认旋转中心点为宽高的一半
+
+        transform:rotateX(deg);
+        transform:rotateY(deg);
+
+
+         transform-origin:;  设置旋转的中心点
+
+         3）缩放
+         transform:scale(x,y);
+         默认值   1
+         取值0-1  缩小
+         >1    放大
+         当取值为一个时，等比例缩放，两个值代表水平和垂直
+
+         transform:scaleX();   水平方向上缩放
+         transform:scaleY();   垂直方向上缩放
+
+         4）倾斜
+         transform；skew(xdeg,ydeg)
+         取一个值代表水平方向
+         两个值代表水平和垂直
+
+         transform: skewX(deg);
+         transform: skewY(deg);
+
+        */
+        .box{
+            width: 234px;
+            height: 300px;
+            background-color: pink;
+            margin: 150px;
+
+        }
+        .box:hover{
+            /*transform: translate(0,-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,.2);*/
+
+            /*transform: translate(-30px,-20px);*/
+            /*transform: translateX(30px);*/
+            /*transform: translateY(30px);*/
+
+            /*transform: rotate(60deg);*/
+            /*transform: rotateX(60deg);*/
+            /*transform: rotateY(60deg);*/
+            /*transform-origin: right top;*/
+
+
+            /*transform:translate(20px,20px) rotate(60deg);*/
+
+            /*transform: scale(1.5,.5);*/
+            /*transform: scaleX(1.5);*/
+            /*transform: scaleY(1.5);*/
+
+
+            /*transform: skew(30deg,60deg);*/
+            /*transform: skewX(30deg);*/
+            /*transform: skewY(30deg);*/
+        }
+    </style>
+</head>
+<body>
+<div class="box">哈哈哈哈</div>
+</body>
+</html>

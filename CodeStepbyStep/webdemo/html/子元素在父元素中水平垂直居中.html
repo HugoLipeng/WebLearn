@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>子元素在父元素中水平垂直居中</title>
+    <style>
+        /*
+        子元素在父元素中水平垂直居中
+        1.弹性盒
+         .container{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        2.表格法
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 0 auto;
+        }
+
+
+
+        */
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box"></div>
+</div>
+</body>
+</html>

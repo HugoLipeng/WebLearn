@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>过渡</title>
+    <style>
+        /*
+        1.过渡
+        属性：transition:;
+        作用：从一个效果平滑的过渡到另外一个效果
+        必须有触发事件   :hover
+
+        1)过渡的属性
+        可以过渡的属性：
+        颜色
+        取值为数值
+        阴影
+        转换
+        背景渐变
+
+        简写  all
+
+        2）过渡的时间
+        s   ms
+        1s=1000ms
+
+        3)速度变换类型
+        ease  默认值  先加速后减速效果
+        ease-in   加速效果
+        ease-out   减速效果
+        ease-in-out   先加速后减速效果
+        linear    匀速
+
+        4)延迟
+        s  ms
+
+
+
+
+        */
+        .box{
+            width: 234px;
+            height: 300px;
+            background-color: red;
+            margin: 50px;
+            /*transition:transform 1s ,box-shadow 1s,background-color 1s,border-radius 1s,border 1s,width 1s;*/
+            /*transition: all 2s ease-in 1s;*/
+
+           /*transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 1s;*/
+        }
+        .box:hover{
+            transform: translate(0,-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,.5);
+            background-color: pink;
+            border-radius: 50%;
+            border: 20px solid red;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

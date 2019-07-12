@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style>
+        /*
+        position   定位
+        属性值：
+        1）静态定位  默认值
+        static
+        2）相对定位  relative
+        相对于自己原位置定位，定位后原位置保留
+        配合top，bottom，left，right使用
+
+        3)绝对定位  absolute
+        绝对定位相对于已经定位的父元素定位，如果父元素没有定位，逐级往上找，
+        最后相对于body定位
+        一般建议给父元素加一个相对定位position:relative;
+        绝对定位后原位置不保留
+        配合top，bottom，left，right使用
+
+        4)固定定位  fixed
+        相对于浏览器窗口定位
+        定位后原位置不保留
+        配合top，bottom，left，right使用
+
+        5)堆叠顺序
+        z-index:number;
+        默认值为1
+        取值越大，越往上
+        可以取负值
+        必须配合position定位使用（position取值为relative，absolute。fixed）
+
+
+        */
+        .box{
+            width: 500px;
+            height: 600px;
+            border: 1px solid red;
+            margin: 50px;
+            position: relative;
+        }
+        .one,.two{
+            width: 200px;
+            height: 200px;
+        }
+        .one{
+            background-color: pink;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 77;
+        }
+        .two{
+            background-color: palegreen;
+            z-index: 66;
+            position: relative;
+        }
+        .back{
+            width: 50px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #ccc;
+            text-align: center;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+        .back>a{
+            color: #fff;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="one"></div>
+    <div class="two"></div>
+</div>
+<div class="back">
+    <a href="#">↑</a>
+</div>
+</body>
+</html>
