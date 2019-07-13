@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+	/*
+	switch(待检测值){
+		case 值1 :
+			值1 与 待检测值 相同时做的事情
+			break;
+		case 值2 :
+			值2 与 待检测值 相同时做的事情
+			break;
+		case 值3 :
+			值3 与 待检测值 相同时做的事情
+			break;
+		default :
+			默认要做的
+			break;
+	}
+	*/
+
+	/*
+		var xingzuo = prompt('请输入星座','双鱼座');
+
+		switch(xingzuo){
+			case '双鱼座':
+				console.log('今天爱情运势高，小情侣可以到外面约会谈情，多了解另一半的内心想法，至于单身者，被表白的机率很大，心里喜滋滋的，但千万别一时迷糊，不喜欢就早点拒绝，以免出现误会。');
+				break;
+
+			case '双子座':
+				console.log('思绪较为混乱的一天，很容易会做出冲动的事情。工作上会碰到状况或麻烦，一时控制不住就会开骂，建议少生气，冷静下来才能很好地解决问题，有怒气的时候不适合做重要决定。');
+				break;
+
+			case '狮子座':
+				console.log('今天在他人面前的说服力还是很高的，霸气很足，当有棘手问题的时候，可以请身边的人来帮助自己。有许多工作要花费较多的精力，但是完成后的成果还是令人满意的，而且辛苦都值得');
+				break;
+
+			case '金牛座':
+				console.log('今天在细节方面的事情上要尤其注意一点，工作上会有一些烦心的事情，耐心去解决就好，但职场做事切忌太张扬。人际关系上要多互动，下班后会有朋友找你约会，有机会结识新朋友');
+				break;
+
+			default:
+				console.log('没有收录您的星座');
+				break;
+		}
+
+		*/
+
+		// 如果当前case判断成功 会执行对应的代码,如果当前没有写break; 会一直往后执行遇见case不再判断,直到遇见break为止
+
+		// if一般使用==相等判断  switch使用的是===全等判断
+
+		/*
+		// var month = prompt('输入月份',1);
+		var month = parseInt(prompt('输入月份',1));
+
+		if(month==1){
+			console.log('31tian');
+		}
+
+		switch(month){
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				console.log('31天');
+				break;
+
+			case 4:
+			case 6:
+			case 9:
+			case 11:
+				console.log('30天');
+				break;
+
+			case 2:
+				console.log('闰年29天,平年28天');
+				break;
+
+			default:
+				console.log('请输入正确的月份');
+				break;
+		}
+
+		*/
+		var score = parseFloat(prompt('输入成绩',100));
+
+		switch(true){
+			case score >= 90:
+				console.log('优秀');
+				break;
+
+			case score >= 80:
+				console.log('良好');
+				break;
+
+			case score >= 60:
+				console.log('及格');
+				break;
+
+			default:
+				console.log('不及格');
+				break;
+		}
+
+		// if(score >= 90){
+		// 	console.log('优秀');
+		// }else if(score >= 80){
+		// 	console.log('良好');
+		// }else if(score >= 60){
+		// 	console.log('及格');
+		// }else{
+		// 	console.log('不及格');
+		// }
+
+
+	</script>
+</body>
+</html>

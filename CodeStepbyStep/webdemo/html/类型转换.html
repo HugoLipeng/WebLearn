@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var age = prompt('请输入您的年龄',18);
+		// var age1 = parseInt(age);
+
+		// console.log(age,typeof age);
+		// console.log(age1,typeof age1);
+
+		// parseInt: 把字符串转换成整数(纯数字字符串,数字开头的字符串,只截取整数部分)
+		// var a = '18';
+		// var a = '18岁';
+		// var a = '18haha';
+		// var a = 'haha18haha';
+		// var a = '18.6666';
+		// var b = parseInt(a);
+		// console.log(b,typeof b);
+
+		// parseFloat:  把字符串转换成浮点数(数字开头,纯数字的字符串,只截取数字部分)
+		// parseInt和parseFLoat碰到非数字开头的字符串直接转成NaN
+		// var a = '18';
+		// var a = '18.666';
+		// var a = '18.66年';
+		// var a = 'haha18.666';
+		// var b = parseFloat(a);
+		// console.log(b, typeof b);
+
+		// var a = '18.66';
+		// var b = a - 0; // 隐式转换 
+		// console.log(b, typeof b);
+
+		var a = 10;
+		var b = a + '';
+		console.log(b, typeof b);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 条件 ? value1 : value2
+		// var a = 1>0 ? true : false; 
+		// console.log(a);
+
+		// var score = parseFloat(prompt('请输入分数',100));
+
+		// score >= 60 ? console.log('及格') : console.log('不及格');
+
+
+		var age = parseInt(prompt('输入年龄',22));
+		var gender = prompt('请输入性别','男');
+
+		var minage = gender=='男' ? 22 : 20;
+		age >= minage ? console.log('可以结婚了') : console.log('还小');
+
+		// if(gender=='男'){
+		// 	age >= 22 ? console.log('恭喜,可以娶媳妇了') : console.log('你还小,你还是个孩子啊');
+		// }else{
+		// 	age >= 20 ? console.log('恭喜,可以嫁人了') : console.log('你还小,你还是个孩子啊');
+		// }
+
+		// if(gender=='男'){
+		// 	if(age >= 22){
+		// 		console.log('恭喜,可以娶媳妇了');
+		// 	}else{
+		// 		console.log('你还小,你还是个孩子啊');
+		// 	}
+		// }else{
+		// 	if(age >= 20){
+		// 		console.log('恭喜,可以嫁人了');
+		// 	}else{
+		// 		console.log('你还小,你还是个孩子啊');
+		// 	}
+		// }
+	</script>
+</body>
+</html>
