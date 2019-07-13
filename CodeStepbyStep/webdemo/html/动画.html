@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        /*
+        1.动画
+        animation:;
+        关键帧动画
+        1）定义动画
+
+        @keyframes name  {
+            from|0%{
+                css样式
+            }
+            percent{
+                css样式
+            }
+            to|100%{
+                css样式
+            }
+        }
+
+        2）调用动画
+        animation:name 时间;
+
+
+
+
+
+
+        */
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            /*          名字 持续时间   速度变换类型  延迟  播放次数（infinite） 播放方向（alternate） 动画停在最后一帧（forwards）*/
+           /* animation: change 5s ease-in 2s infinite alternate;
+            -webkit-animation: change 5s ease-in 2s infinite alternate;
+            -moz-animation: change 5s ease-in 2s infinite alternate;
+            -o-animation:change 5s ease-in 2s infinite alternate;
+            -ms-animation:change 5s ease-in 2s infinite alternate;*/
+            /*-webkit-animation: anima 5s 2 alternate forwards;*/
+            -webkit-animation-name: anima;
+            -webkit-animation-duration: 5s;
+            -webkit-animation-timing-function: ease-in;
+            -webkit-animation-delay: 1s;
+            -webkit-animation-iteration-count: 2;
+            -webkit-animation-direction: alternate;
+            -webkit-animation-fill-mode: forwards;
+        }
+       /* .box:hover{
+            animation: change 5s;
+            -webkit-animation: change 5s;
+            -moz-animation: change 5s;
+            -o-animation:change 5s;
+            -ms-animation:change 5s;
+        }*/
+        /*@keyframes change {
+            0%{
+                width: 600px;
+                border: 20px solid red;
+            }
+            10%{
+                border-radius: 50%;
+            }
+            35%{
+                margin-top: 400px;
+                margin-left: 400px;
+                width: 200px;
+            }
+            100%{
+                background-color: pink;
+            }
+        }
+        @-webkit-keyframes  change{
+            0%{
+                width: 600px;
+                border: 20px solid red;
+            }
+            10%{
+                border-radius: 50%;
+            }
+            35%{
+                margin-top: 400px;
+                margin-left: 400px;
+                width: 200px;
+            }
+            100%{
+                background-color: pink;
+            }
+         }*/
+        @-webkit-keyframes anima {
+            from{
+                background-color: red;
+            }
+            30%{
+                background-color: pink;
+            }
+            70%{
+                background-color: palegreen;
+            }
+            to{
+                background-color: blue;
+            }
+         }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box2"></div>
+</body>
+</html>
