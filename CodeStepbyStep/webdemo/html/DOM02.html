@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM2</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<!--<div style="width: 200px;height: 200px;background-color: red;"></div>-->
+
+<!--<div id="box">我是HTML写入的文本</div>-->
+
+<div id="box" class="box box1">哈哈哈哈哈</div>
+<script>
+    /*
+    * 1.创建HTML元素
+    *document.createElement("元素名")
+    *
+    *2.追加到网页中
+    * 范围.appendChild()
+    *
+    * 3.创建文本节点
+    *document.createTextNode("...")
+    *
+    * 4.追加到网页中
+    * 范围.appendChild()
+    *
+    * 5.创建属性
+    * document.createAttribute("属性名");
+    *
+    * 6.设置属性值
+    * 属性.value="";
+    *
+    * 7.把属性设置到元素上
+    * 元素.setAttributeNode();
+    *
+    *
+    *8.修改HTML元素内容
+    * 范围.innerHtml="";
+    *
+    * 9.设置css样式
+    * 1）.setAttribute("属性","属性值")
+    * 2）.style.css属性="属性值";
+    * css属性里面的-，需要转换为首字母大写
+    * 属性值加引号和单位
+    * 3）.style.cssText="属性";
+    * 4）.className=""
+    *
+    * 10.操作元素节点
+    * 1)获取属性
+    * .getAttribute()
+    * 有此属性  返回属性值
+    * 没有   返回null
+    *
+    * 2）设置属性
+    * .setAttribute("属性","属性值")
+    *
+    * 3）删除属性
+    * .removeAttribute("");
+    *
+    * */
+//    创建div元素
+//    var div=document.createElement("div");
+//    追加到HTML页面中
+//    document.body.appendChild(div);
+
+   /* var h1=document.createElement("h1");
+    div.appendChild(h1);*/
+
+
+//    document.body.appendChild(document.createElement("div"))
+
+//    创建文本节点
+//    var text=document.createTextNode("我是js创建的div元素");
+
+//    追加到元素里
+//    div.appendChild(text);
+
+//    创建属性
+//     var style=document.createAttribute("style");
+//    设置属性值
+//    style.value="width:200px;height:200px;background-color:red;";
+
+//    设置到元素上
+//    div.setAttributeNode(style);
+
+//    var box=document.getElementById("box");
+  /*  var text=document.createTextNode("我是js创建的文本");
+    box.appendChild(text);*/
+
+//    box.innerHTML="我是js创建的文本";
+
+//    创建元素
+//    var div=document.createElement("div");
+//    追加到页面中
+//    document.body.appendChild(div);
+//    div.setAttribute("style","width:200px;height:200px;background-color:pink;")
+
+    /*div.style.width="200px";
+    div.style.height="200px";
+    div.style.backgroundColor="pink";
+    div.style.borderRadius="20px";*/
+
+    /*div.style.cssText="width:200px;height:200px;background-color:pink;";
+    div.style.cssText="";*/
+
+
+   /* var box=document.getElementById("box");
+    box.className="box";*/
+
+    var box=document.getElementById("box");
+    console.log(box.getAttribute("class"));
+    console.log(box.getAttribute("title"));
+    box.removeAttribute("class");
+</script>
+</body>
+</html>

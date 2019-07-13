@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<!--<div class="box">盒子</div>-->
+
+<!--<a href="#" id="baidu">跳转到百度</a>-->
+
+<!--<img src="images/a.gif" alt="" id="img"/>-->
+<ul id="ul">
+    <li class="list">1</li>
+</ul>
+<script>
+    /*
+    * 1.DOM概念
+    * 文档对象模型
+    * 操作HTML页面
+    *
+    * 2.DOM中把HTML所有元素看做节点
+    * 1）整个HTML文档是文档节点
+    * 2）HTML中的元素是元素节点
+    * 3）HTML中的文本是文本节点
+    * 4）HTML的属性是属性节点
+    * 5）HTML中的注释是注释节点
+    *
+    * 每个节点都有关系：
+    * 父节点
+    * 子节点
+    * 兄弟节点
+    *
+    *3.document节点
+    * 又叫做documen对象
+    * 文档的根节点
+    * 浏览器一加载HTML文档就会生成document节点
+    *
+    *4.document常用属性
+    * 1）设置网页标题
+    * document.title="";
+    *2）获取HTML文档的路径
+    * document.location.href
+    * 设置href路径
+    * .href=""
+    *
+    * 3)图片的路径
+    * .src=""
+    *
+    * 4)input的value属性
+    * .value
+    *
+    * 5.获取HTML元素
+    * 1）通过ID查找
+    * document.getElementById("");
+    *
+    * 2)通过标签名查找
+    *范围.getElementByTagName("");
+    * 返回的是数组
+    *
+    *3)通过选择器查找一个
+    *document.querySelector("")
+    * 只查找一个，如果查找不到，返回null
+    * 一般查找类选择器
+    *
+    * document.querySelectorAll("")
+    * 查找符合条件的所有元素，返回值为数组
+    * 如果查找不到返回null
+    *
+    * 4）通过类选择器查找
+    * document.getElementByClassName("")
+    * 返回数组
+    *
+    *
+    *
+    *
+    *
+    *
+    * */
+//    document.title="这是新标题";
+//    console.log(document.location.href);
+//    var baidu=document.getElementById("baidu");
+//    baidu.href="http://www.baidu.com";
+
+    /*var img=document.getElementById("img");
+    img.onclick=function(){
+        img.src="images/b.gif"
+    }*/
+
+//    var ul=document.getElementById("ul");
+//    var li=ul.getElementsByTagName("li");
+//    console.log(li);
+//    for(var i=0;i<li.length;i++){
+//        console.log(li[i]);
+//    }
+
+    /*var li=document.querySelectorAll(".list");
+    console.log(li);*/
+
+    var list=document.getElementsByClassName("list");
+    console.log(list);
+
+</script>
+</body>
+</html>
