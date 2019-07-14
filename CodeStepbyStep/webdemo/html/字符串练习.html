@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 编写函数repeat(char,n) 实现重复char字符串n次
+        // 比如repeat("★",6) 返回"★★★★★★"
+        function repeat(char, n) {
+            var str = "";
+            for (var i = 0; i < n; i++) {
+                str += char;
+            }
+            return str;
+        }
+        var test1 = repeat('a', 3);
+        console.log(test1);
+
+        // 编写函数xingxing(n),在控制台输出图形
+        // 比如xingxing(5)
+        //     *
+        //    ***
+        //   *****
+        //  *******
+        // *********
+        function xingxing(n) {
+            for (var i = 1; i <= n; i++) {
+                // console.log(i);
+                // n-i个空格 +  2*i-1个'*'
+                var str = '';
+                // 拼接空格
+                for (var j = 0; j < n - i; j++) {
+                    str += ' ';
+                }
+
+                // 拼接'*'
+                for (var k = 0; k < 2 * i - 1; k++) {
+                    str += '*';
+                }
+
+                console.log(str);
+            }
+        }
+
+        console.log(xingxing(5));
+
+        // 编写函数rev(char) 实现将字符串char倒置
+        // 比如rev("spring") 返回"gnirps"
+        function rec(char) {
+            var str = "";
+            for (var i = char.length() - 1; i >= 0; i--) {
+                str += char.charAt(i);
+            }
+        }
+        console.log(rec(woshilip));
+        // function rev(char){
+	    // 	把字符串转成数组
+	    // 	var arr = char.split('');
+
+	    // 	// 数组倒序
+	    // 	arr.reverse();
+
+	    // 	// 数组转成字符串并返回
+	    // 	return arr.join('');
+	    // }
+
+        // 将字符串"i come from beijing"倒置，即控制台输出"beijing from come i"
+		// 语句直接写在程序中，不需要用户输入
+
+		var str = 'i come from beijing';
+		// 转数组
+		var arr = str.split(' ');
+
+		// 倒序
+		arr.reverse();
+
+		// 转字符串
+		console.log(arr.join(' '));
+
+
+
+        // 编写函数rightchange(char,n) 实现字符串char循环右移n位。
+		// 比如rightchange("abcdefg",2) 返回"fgabcde"
+
+		// function rightchange(char,n){
+		// 	// 对n处理,移动1次和移动char,length+1次效果是一样的
+		// 	n = n%char.length;
+
+		// 	// 如果移动的位数是char.length的整数倍 就相当于没移动,直接返回char
+		// 	if(!n) {
+		// 		console.log(char);
+		// 		return;
+		// 	}
+		// 	var newstr = char.substr(-n) + char.substring(0,char.length-n);	
+		// 	console.log(newstr);
+		// }
+
+		function rightchange(char,n){
+			// 对n处理,移动1次和移动char,length+1次效果是一样的
+			n = n%char.length;
+
+			// 如果移动的位数是char.length的整数倍 就相当于没移动,直接返回char
+			if(!n) {
+				console.log(char);
+				return;
+			}
+			// 转数组
+			var arr = char.split('');
+			// 把尾删的元素插入头部,实现右移	
+			for(var i = 0; i < n; i++){
+				arr.unshift(arr.pop());
+			}
+			
+			console.log(arr.join(''));
+		}
+
+		rightchange('abcdefg',2);
+		// rightchange('abcdefg',40);
+		// rightchange('abcdefg',41);
+		// rightchange('abcdefg',42);
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

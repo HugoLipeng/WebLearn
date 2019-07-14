@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 不管中文,英文,数字,空格,标点都算一个长度
+		// length:长度
+		// charAt(n) : 返回下标为n的字符
+		// indexOf() : 查找字符首次出现的位置
+		// lastIndexOf(): 查找字符最后出现的位置
+		// slice(start,end) 截取字符串 (不能调换顺序)
+		// split() 转数组
+		// substring(from,to) 截取字符串 (不能使用负值)(可以调换顺序)
+		// substr(start,length) 截取字符串(可以使用负值)
+		// var str = '楚楚又瘦了 都瘦脱相了 haha666!';
+		// console.log(str.length);
+		// console.log(str.charAt(6));
+
+		// console.log(str.indexOf('楚'));
+		// console.log(str.lastIndexOf('楚'));
+
+		// console.log(str.slice(0,5));
+		// console.log(str.split(' '));
+		// console.log(str.split(''));
+
+		// console.log(str.substring(6,7));
+		// console.log(str.substr(6,7));
+		// console.log(str.substring(-5));
+		// console.log(str.substr(-5));
+
+		// console.log(str.slice(0,5));
+		// console.log(str.substring(0,5));
+		// console.log(str.slice(5,0));
+		// console.log(str.substring(5,0));
+
+
+		// var newstr = str.concat('都是假的','hahaha');
+		// console.log(newstr);
+
+		var str = 'today is a good day!';
+		var newstr = str.toUpperCase();
+		console.log(newstr);
+
+		var str1 = 'TODAY IS A GOOD DAY!';
+		var newstr1 = str1.toLowerCase();
+		console.log(newstr1);
+	</script>
+</body>
+</html>
