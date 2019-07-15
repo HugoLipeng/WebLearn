@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box" id="idbox">div</div>
+
+	<script>
+		var box = document.getElementById('idbox');
+
+		// box.onclick = function(){
+		// 	console.log('onclick');
+		// }
+
+		// function haha(){
+		// 	console.log('haha');
+		// }
+
+		// box.onclick = haha;
+		// onclick 		单击
+		// onmouseover	鼠标进入
+		// onmouseout		鼠标离开
+		// ondblclick		双击
+		// onfocus			得到焦点
+		// onblur			失去焦点
+		// onmousedown		鼠标按下
+		// onmouseup			鼠标按键抬起
+
+
+		box.onclick = function () {
+			console.log('onclick');
+		}
+
+		box.onmouseover = function () {
+			console.log('onmouseover');
+		}
+
+		box.onmouseout = function () {
+			console.log('onmouseout');
+		}
+
+		box.onmousedown = function () {
+			console.log('onmousedown');
+		}
+
+		box.onmouseup = function () {
+			console.log('onmouseup');
+		}
+
+		box.ondblclick = function () {
+			console.log('ondblclick');
+		}
+
+		window.onload = function () {
+			console.log('onload');
+		}
+
+
+	</script>
+</body>
+
+</html>
