@@ -58,70 +58,111 @@
         }
         console.log(rec(woshilip));
         // function rev(char){
-	    // 	把字符串转成数组
-	    // 	var arr = char.split('');
+        // 	把字符串转成数组
+        // 	var arr = char.split('');
 
-	    // 	// 数组倒序
-	    // 	arr.reverse();
+        // 	// 数组倒序
+        // 	arr.reverse();
 
-	    // 	// 数组转成字符串并返回
-	    // 	return arr.join('');
-	    // }
+        // 	// 数组转成字符串并返回
+        // 	return arr.join('');
+        // }
 
         // 将字符串"i come from beijing"倒置，即控制台输出"beijing from come i"
-		// 语句直接写在程序中，不需要用户输入
+        // 语句直接写在程序中，不需要用户输入
 
-		var str = 'i come from beijing';
-		// 转数组
-		var arr = str.split(' ');
+        var str = 'i come from beijing';
+        // 转数组
+        var arr = str.split(' ');
 
-		// 倒序
-		arr.reverse();
+        // 倒序
+        arr.reverse();
 
-		// 转字符串
-		console.log(arr.join(' '));
+        // 转字符串
+        console.log(arr.join(' '));
 
 
 
         // 编写函数rightchange(char,n) 实现字符串char循环右移n位。
-		// 比如rightchange("abcdefg",2) 返回"fgabcde"
+        // 比如rightchange("abcdefg",2) 返回"fgabcde"
 
-		// function rightchange(char,n){
-		// 	// 对n处理,移动1次和移动char,length+1次效果是一样的
-		// 	n = n%char.length;
+        // function rightchange(char,n){
+        // 	// 对n处理,移动1次和移动char,length+1次效果是一样的
+        // 	n = n%char.length;
 
-		// 	// 如果移动的位数是char.length的整数倍 就相当于没移动,直接返回char
-		// 	if(!n) {
-		// 		console.log(char);
-		// 		return;
-		// 	}
-		// 	var newstr = char.substr(-n) + char.substring(0,char.length-n);	
-		// 	console.log(newstr);
-		// }
+        // 	// 如果移动的位数是char.length的整数倍 就相当于没移动,直接返回char
+        // 	if(!n) {
+        // 		console.log(char);
+        // 		return;
+        // 	}
+        // 	var newstr = char.substr(-n) + char.substring(0,char.length-n);	
+        // 	console.log(newstr);
+        // }
 
-		function rightchange(char,n){
-			// 对n处理,移动1次和移动char,length+1次效果是一样的
-			n = n%char.length;
+        function rightchange(char, n) {
+            // 对n处理,移动1次和移动char,length+1次效果是一样的
+            n = n % char.length;
 
-			// 如果移动的位数是char.length的整数倍 就相当于没移动,直接返回char
-			if(!n) {
-				console.log(char);
-				return;
-			}
-			// 转数组
-			var arr = char.split('');
-			// 把尾删的元素插入头部,实现右移	
-			for(var i = 0; i < n; i++){
-				arr.unshift(arr.pop());
-			}
-			
-			console.log(arr.join(''));
-		}
+            // 如果移动的位数是char.length的整数倍 就相当于没移动,直接返回char
+            if (!n) {
+                console.log(char);
+                return;
+            }
+            // 转数组
+            var arr = char.split('');
+            // 把尾删的元素插入头部,实现右移	
+            for (var i = 0; i < n; i++) {
+                arr.unshift(arr.pop());
+            }
 
-		rightchange('abcdefg',2);
-		// rightchange('abcdefg',40);
-		// rightchange('abcdefg',41);
-		// rightchange('abcdefg',42);
+            console.log(arr.join(''));
+        }
+
+        rightchange('abcdefg', 2);
+        // rightchange('abcdefg',40);
+        // rightchange('abcdefg',41);
+        // rightchange('abcdefg',42);
+
+
+
+        // 编写函数maxr(char) 返回字符串char中最长的连续重复字母
+        // 比如maxr("mmmiijjjjkkkkkkssptr") 返回"kkkkkk"
+
+        console.log(maxr('mmmiijjjjkkkkkkssptr'));
+
+        function maxr(char) {
+            // 双指针法
+            var a = 0;
+            var b = 1;
+            var maxletter = '';
+            var maxlength = 0;
+
+            while (a != char.length - 1) {
+
+                if (char.charAt(a) == char.charAt(b)) {
+                    // 如果char.charAt(a) == char.charAt(b)成立,代表a,b对应的字母是重复的,把b往后再挪一位
+
+                    b = b + 1;
+                } else {
+                    // 如果char.charAt(a) == char.charAt(b)不成立,代表a,b对应的字母不是一样的,如果本次的重复次数大于之前记录的长度,记录本次最长的重复长度,字母,a要挪到b的位置,b+1,继续判断
+                    if (b - a > maxlength) {
+                        // maxletter = char.charAt(a);
+                        maxletter = char.substring(a, b);
+                        maxlength = b - a;
+                    }
+
+                    a = b;
+                    b = b + 1;
+                }
+
+            }
+
+
+            return maxletter;
+        }
+
+
+
 
         
 
