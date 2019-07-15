@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 求一个三位数，该三位数等于其每位数字的阶乘之和。
+
+		function jiecheng(n){
+			var ji = 1;
+			for(var i = 1; i <= n; i++){
+				ji *= i;
+			}
+			return ji;
+		}
+
+		for(var i = 100; i < 1000; i++){
+			var ge = i % 10;
+			var shi = parseInt(i/10) % 10;
+			var bai = parseInt(i/100);
+			var sum = jiecheng(ge) + jiecheng(shi) + jiecheng(bai);
+			if(i == sum){
+				console.log(i);
+			}
+		}
+
+	</script>
+</body>
+</html>

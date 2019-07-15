@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	// 求2~100所有的质数
+	// 是否质数-->约数个数-->约数
+
+		function yueshugeshu(m){
+			var count = 0;
+			for(var i = 1; i <= m; i++){
+				if(m % i == 0){
+					count++;
+				}
+			}
+
+			return count;
+		}
+
+		function isZhishu(n){
+			if(yueshugeshu(n) == 2){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		// for(var i = 2; i <= 100; i++){
+		// 	if(isZhishu(i)) {
+		// 		console.log(i);
+		// 	}
+		// }
+
+		// 求a~b所有的质数
+		function logzhishu(a,b){
+			for(var i = a; i <= b; i++){
+				if(isZhishu(i)) {
+					console.log(i);
+				}
+			}
+		}
+
+		logzhishu(10,30);
+
+
+	</script>
+</body>
+</html>

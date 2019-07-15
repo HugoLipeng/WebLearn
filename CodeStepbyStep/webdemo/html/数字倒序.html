@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		编写一个函数rev用于将一个整数前后倒置。
+		例如rev(12345)将返回54321，rev(123)将返回321
+		整数位数不限制，多少位都行
+
+		12345 -->  54321
+
+		a:12345   b:0
+		1234 		5
+		123 		54
+		12 			543
+		1 			5432
+		0 			54321
+		*/
+
+		function rev(a){
+			var b = 0;
+			while(a){
+				b = b*10 + a%10;
+				a = parseInt(a/10);
+			}
+			return b;
+		}
+		
+		var num = prompt('请输入数字，我们将求它的倒数');
+		alert(rev(num));
+		console.log(rev(num));
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str = 'today is a good day!';
+
+		// 切割字符串,把字符串转换成单个单词的数组
+		var arr = str.split(' ');
+		// console.log(arr);
+
+		// 遍历数组把小写单词变成首字母大写的单词
+		for(var i = 0; i < arr.length; i++){
+			arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+		}
+
+		// console.log(arr);
+		// 把数组拼接成字符串
+		var newstr = arr.join(' ');
+		console.log(newstr);
+
+	</script>
+</body>
+</html>
