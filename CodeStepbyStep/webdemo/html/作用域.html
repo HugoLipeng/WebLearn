@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var a = 10;
+
+		// function haha(){
+		// 	console.log(a);
+		// }
+		// haha();
+
+		// for(var i = 0; i < 10; i++){
+		// 	console.log(a);
+		// }
+//-----------------------------
+		// function haha(){
+		// 	var a = 10; // a 定义在function内部,是局部变量,只在function内部有定义
+		// 	console.log('function内部' + a);
+		// }
+
+		// haha();
+
+		// console.log('function外部' + a); // Uncaught ReferenceError: a is not defined
+//---------------------
+
+
+		// var a = 20;
+		// function haha(){
+		// 	var a = 10;
+		// 	console.log('function内部' + a);
+		// }
+
+		// haha();
+
+		// console.log('function外部'+a);
+
+		//---------------------------
+
+		// function haha(){
+		// 	a = 10; 
+		// 	console.log('function内部' + a);
+		// }
+
+		// haha();
+
+		// console.log('function外部'+a);
+
+		//-------------------
+
+		// 函数的参数是函数内部的局部变量,在外面无法访问
+		// function haha(a){
+		// 	console.log('function内部的参数+' + a);
+		// }
+
+		// haha(1);
+
+		// console.log(a); // 05-作用域.html:60 Uncaught ReferenceError: a is not defined
+
+		//------------------------
+
+		// 全局变量 通讯作用
+		// var a = 10;
+		// function sum(){
+		// 	a++;
+		// 	console.log(a);
+		// }
+		// function subtraction(){
+		// 	a--;
+		// 	console.log(a);
+		// }
+
+		// sum();
+		// subtraction();
+
+		// 全局变量 累加不会重置
+		// var age = 18;
+		// function growup(){
+		// 	age++;
+		// 	console.log(age);
+		// }
+
+		// growup();
+		// growup();
+
+		// // 1+2+...+10
+		// var sum = 0;
+		// for(var i = 1; i <= 10; i++){
+		// 	sum += i;
+		// }
+
+		// -------------------
+
+		// 函数的定义也有作用域
+		
+		function iszhishu(m){
+			if(yueshugeshu(m) == 2){
+				return true;
+			}else{
+				return false;
+			}
+
+			function yueshugeshu(n){
+				var count = 0;
+				for(var i = 1; i <= n; i++){
+					if(n%i == 0){
+						count++;
+					}
+				}
+				return count;
+			}
+		}
+
+		// console.log(yueshugeshu(10)); // Uncaught ReferenceError: yueshugeshu is not defined
+		console.log(iszhishu(10));
+
+	</script>
+</body>
+</html>
