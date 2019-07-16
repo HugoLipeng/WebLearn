@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.box1{
+			width: 500px;
+			height: 500px;
+			border: 20px solid red;
+			padding: 50px;
+			position: absolute;
+
+		}
+
+		.box2{
+			width: 380px;
+			height: 380px;
+			border: 10px solid blue;
+			padding: 50px;
+
+		}
+
+		.box3{
+			width: 260px;
+			height: 260px;
+			border: 10px solid orange;
+			padding: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="box2">
+			<div class="box3"></div>
+		</div>
+	</div>
+
+	<script>
+
+		// IE9,IE9+,chrome : offsetParent对象 自己祖先元素中定位的元素,如果祖先元素都没有定位就是body offsetLeft: 自己左边框外到offsetParent左边框内
+		var box3 = document.getElementsByTagName('div')[2];
+		// console.log(box3.offsetTop);
+		// alert(box3.offsetLeft);
+		// alert(box3.offsetParent.className);
+		console.log(box3.offsetWidth,box3.offsetHeight);
+		console.log(box3.clientWidth,box3.clientHeight);
+
+	</script>
+</body>
+</html>
