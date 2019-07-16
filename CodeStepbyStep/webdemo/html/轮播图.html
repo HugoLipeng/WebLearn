@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.box{
+			width: 672px;
+			height: 320px;
+			border: 1px solid gray;
+			margin: 100px auto;
+
+			position: relative;
+		}
+
+		ul{
+			list-style: none;
+		}
+		
+		.imglist ul li{
+			width: 672px;
+			height: 320px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			/*默认图片全部隐藏*/
+			display: none;
+		}
+
+		/*有current类的图片显示*/
+		.imglist ul li.current{
+			display: block;
+		}
+
+		.btn span{
+			width: 55px;
+			height: 55px;
+			background: url('../images/sohu/slide-btnL.png');
+			position: absolute;
+			top: 50%;
+			margin-top: -27px;
+		}
+
+		.btn span.leftbtn{
+			left: 10px;
+		}
+
+		.btn span.rightbtn{
+			right: 10px;
+			background: url('../images/sohu/slide-btnR.png');
+		}
+
+		.circle{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+
+		.circle ul li{
+			width: 10px;
+			height: 10px;
+			background: rgba(0,0,0,0.5);
+			border-radius: 50%;
+			float: left;
+			margin-right: 10px;
+		}
+		/*小圆点选中是白色*/
+		.circle ul li.current{
+			background: rgb(255,255,255);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="box">
+		<div class="imglist" id='imglist'>
+			<ul>
+				<li class='current'><a href="#"><img src="../images/sohu/aaa.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/sohu/bbb.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/sohu/ccc.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/sohu/ddd.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/sohu/eee.jpg" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="btn">
+			<span class="leftbtn" id='left'></span>
+			<span class="rightbtn" id='right'></span>
+		</div>
+
+		<div class="circle" id='cicle'>
+			<ul>
+				<li class='current'></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<script>
+		// 获取元素
+		var imglis = document.getElementById('imglist').getElementsByTagName('li');
+		var leftbtn = document.getElementById('left');
+		var rightbtn = document.getElementById('right');
+		var circlelis = document.getElementById('cicle').getElementsByTagName('li');
+
+		// 信号量
+		var idx = 0;
+
+		// 左右按钮点击事件
+		rightbtn.onclick = function (){
+			idx++;
+			changePic();
+		}
+
+		leftbtn.onclick = function (){
+			idx--;
+			changePic();
+		}
+
+		// 小圆点批量监听
+		for(var i = 0; i < circlelis.length; i++){
+			// 绑定自定义属性
+			circlelis[i].idxxx = i;
+
+			circlelis[i].onmouseover = function (){
+				// 鼠标进入小圆点时要更改idx值
+				idx = this.idxxx;
+
+				// 调用图片切换函数
+				changePic();
+			}
+		}
+
+
+		function changePic(){
+			// 对idx验收
+			if(idx > imglis.length-1) idx = 0;
+			if(idx < 0) idx = imglis.length-1;
+			// 根据信号量idx做排他,实现图片的切换
+			for(var i = 0; i < imglis.length; i++){
+				imglis[i].className = '';
+			}
+			imglis[idx].className = 'current';
+
+			// 根据信号量idx做排他,实现小圆点的切换
+			for(var i = 0; i < circlelis.length; i++){
+				circlelis[i].className = '';
+			}
+			circlelis[idx].className = 'current';
+
+		}
+
+	</script>
+</body>
+</html>

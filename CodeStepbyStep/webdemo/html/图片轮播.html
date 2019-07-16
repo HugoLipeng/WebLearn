@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片轮播</title>
+</head>
+<body>
+	<button id='preBtn'>上一张</button>
+	<img src="../images/lunbo/1.jpeg" alt="" id='tutu'>
+	<button id='nextBtn'>下一张</button>
+
+	<script>
+		// 获取元素
+		var preBtn = document.getElementById('preBtn');
+		var nextBtn = document.getElementById('nextBtn');
+		var tutu = document.getElementById('tutu');
+
+		// 信号量
+		var idx = 1;
+
+		// 点击事件
+		nextBtn.onclick = function (){
+			// 先判断
+			// if(idx < 5){
+			// 	idx++;
+			// }else{
+			// 	idx = 1;
+			// }
+
+			// 后验收
+			idx++;
+			if(idx > 5){
+				idx = 1;
+			}
+			tutu.src = '../images/lunbo/' + idx + '.jpeg';
+		}
+
+		preBtn.onclick = function (){
+
+			// if(idx > 1){
+			// 	idx--;
+			// }else{
+			// 	idx = 5;
+			// }
+
+			idx--;
+			if(idx < 1){
+				idx = 5;
+			}
+			tutu.src = '../images/lunbo/' + idx + '.jpeg';
+		}
+	</script>
+</body>
+</html>
