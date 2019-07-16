@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- <img src="img/huge.jpg" alt="" id='huge'> -->
+	<script>
+
+		// // 获取图片
+		// var huge = document.getElementById('huge');
+
+		// // 获取属性
+		// console.log(huge.src);
+
+		// // 更改属性
+		// huge.src = 'img/hg.jpg';
+	</script>
+
+	<div class="box" id='idbox' dongcidaci='dongcidaci' style='width:200px;height:200px;background:skyblue;'>box</div>
+
+	<script>
+		var box = document.getElementById('idbox');
+
+		// console.log(box.class); // undefined
+		// console.log(box.className); // box
+
+		// box.className = 'haha';
+
+		// console.log(box.getAttribute('class'));
+		// box.setAttribute('class', 'xixi');
+
+		// console.log(box.dongcidaci); // undefined
+		// console.log(box.getAttribute('dongcidaci')); // dongcidaci
+
+		console.log(box.style);
+		console.log(typeof box.style); // object
+		console.log(box.style.width); // 200px
+
+		console.log(box.getAttribute('style'));
+		console.log(typeof box.getAttribute('style')); // string
+
+		// 点语法
+		// 调用style时获取到的是对象,能继续打点调用里面具体的属性
+		// 碰到class关键字时,要变成className
+		// 自定义属性无法获取
+
+
+		// getAttribute()和setAttribute()
+		// 调用style时获取到的是字符串
+		// 不需要忌讳关键字
+		// 可以获取自定义属性
+
+		// 使用选择点语法(除了获取自定义属性)
+
+
+	</script>
+</body>
+</html>
