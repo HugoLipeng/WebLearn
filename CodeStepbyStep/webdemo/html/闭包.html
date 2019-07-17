@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// function outer(){
+		// 	var a = 10;
+
+		// 	function inner(){
+		// 		console.log(a);
+		// 	}
+
+		// 	return inner;
+		// }
+
+		// console.log(a); // Uncaught ReferenceError: a is not defined
+		// inner(); // Uncaught ReferenceError: inner is not defined
+
+		// 可以在外部访问函数内部的局部变量,局部的函数,闭包就是外部与函数内部的一座桥梁,返回的函数也会记录自己定义时所处的变量环境
+		// var inn = outer();
+		// inn();
+
+
+		//-------------------------
+		function outer(){
+			var a = 10;
+
+			function inner(){
+				a++;
+				console.log(a);
+			}
+
+			return inner;
+		}
+
+		var inn = outer();
+		inn();  //  11
+		inn();  //  12
+
+		var inn1 = outer();
+		inn1(); //  11
+		inn1(); //  12
+
+		inn(); //  13
+		inn1() //  13
+
+	</script>
+</body>
+</html>
