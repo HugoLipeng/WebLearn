@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background: skyblue;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<button id='move'>move</button>
+	<button id='stop'>stop</button>
+	<div class="box" id='idbox'></div>
+
+	<script>
+		var box = document.getElementById('idbox');
+		var move = document.getElementById('move');
+		var stop = document.getElementById('stop');
+
+		// 信号量
+		var nowleft = 100;
+
+		var timer;
+
+		move.onclick = function () {
+			// 设表先关
+			clearInterval(timer);
+			
+			timer = setInterval(function(){
+				nowleft += 3;
+				box.style.left = nowleft + 'px';
+			}, 50);
+		}
+
+		stop.onclick = function(){
+			clearInterval(timer); // 清除定时器
+		}
+
+	</script>
+</body>
+</html>

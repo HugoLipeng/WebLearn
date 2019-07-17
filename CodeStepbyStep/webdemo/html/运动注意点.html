@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background: skyblue;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+
+	<script>
+		var box = document.getElementsByTagName('div')[0];
+
+		// 信号量
+		var nowleft = 100;
+
+		// 声明定时器
+		var timer;
+
+		timer = setInterval(function(){
+			// 设表先关
+			clearInterval(timer);
+
+			// if(nowleft < 600){
+			// 	nowleft += 13;
+			// }else{
+			// 	nowleft = 600;
+			// 	clearInterval(timer);
+			// }
+
+
+			nowleft += 13;
+			if(nowleft > 600){
+				// 拉终停表
+				clearInterval(timer);
+				nowleft = 600;
+			} 
+
+			console.log(nowleft);
+			box.style.left = nowleft + 'px';
+		}, 50);
+	</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 800px;
+			height: 130px;
+			border: 10px solid #ddd;
+			margin: 100px auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.move{
+			/*这个宽度要足够宽*/
+			width: 10000px;
+			background: skyblue;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		ul{
+			overflow: hidden;
+		}
+
+		li{
+			list-style: none;
+			width: 200px;
+			height: 130px;
+			margin-right: 10px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="move" id='move'>
+			<ul>
+				<li><a href="#"><img src="../images/shuzi/0.png" alt=""></a></li>
+				<li><a href="#"><img src="../images/shuzi/1.png" alt=""></a></li>
+				<li><a href="#"><img src="../images/shuzi/2.png" alt=""></a></li>
+				<li><a href="#"><img src="../images/shuzi/3.png" alt=""></a></li>
+				<li><a href="#"><img src="../images/shuzi/4.png" alt=""></a></li>
+				<li><a href="#"><img src="../images/shuzi/5.png" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		var move = document.getElementById('move');
+		var imgul = move.getElementsByTagName('ul')[0];
+
+		// 图片复制一份
+		imgul.innerHTML += imgul.innerHTML;
+
+		// 信号量
+		var nowleft = 0;
+
+		// 定时器
+		var timer;
+
+		// 默认动画
+		ani();
+
+		// 鼠标进入轮播图,停止轮播
+		move.onmouseover = function(){
+			clearInterval(timer);
+		}
+
+		// 鼠标离开轮播图,继续轮播
+		move.onmouseout = function () {
+			ani();
+		}
+
+		function ani(){
+			timer = setInterval(function(){
+				nowleft -= 10;
+
+				if(nowleft <= -1260){
+					nowleft = 0;
+				}
+				move.style.left = nowleft + 'px';
+			}, 50);
+		}
+	</script>
+</body>
+</html>
