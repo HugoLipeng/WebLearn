@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table{
+			width: 800px;
+			height: 600px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		td{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+	</table>
+
+	<script>
+		// var trs = document.getElementsByTagName('tr');
+
+		// for(var i = 0; i < trs.length; i+=2){
+		// 	trs[i].style.background = 'red';
+		// }
+
+		//-----------------------------
+
+		// var tds = document.getElementsByTagName('td');
+
+		// for(var i = 0; i < tds.length; i+=2){
+		// 	tds[i].style.background = 'red';
+		// }
+
+		//---------------------------
+
+		// var trs = document.getElementsByTagName('tr');
+
+		// for(var i = 0; i < trs.length; i++){
+		// 	var tds = trs[i].getElementsByTagName('td');
+		// 	// console.log(tds);
+		// 	for(var j = 0; j < tds.length; j+=2){
+		// 		tds[j].style.background = 'red';
+		// 	}
+		// }
+
+		//-----------------------
+
+		var trs = document.getElementsByTagName('tr');
+
+		for(var i = 0; i < trs.length; i+=2){
+			var tds = trs[i].getElementsByTagName('td');
+			// console.log(tds);
+			for(var j = 0; j < tds.length; j+=2){
+				tds[j].style.background = 'red';
+			}
+		}
+
+		for(var i = 1; i < trs.length; i+=2){
+			var tds = trs[i].getElementsByTagName('td');
+			// console.log(tds);
+			for(var j = 1; j < tds.length; j+=2){
+				tds[j].style.background = 'red';
+			}
+		}
+
+
+
+	</script>
+</body>
+</html>
