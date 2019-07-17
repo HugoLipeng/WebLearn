@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		p{
+			width: 100px;
+			height: 100px;
+			background: skyblue;
+			float: left;
+			margin-right: 10px;
+			/*border-radius: 100%;*/
+		}
+	</style>
+</head>
+<body>
+	<p>0</p>
+	<p>1</p>
+	<p>2</p>
+	<p>3</p>
+	<p>4</p>
+	<p>5</p>
+
+	<script>
+		var ps = document.getElementsByTagName('p');
+
+		for(var i = 0; i < ps.length; i++){
+			ps[i].onclick = function(){
+				// 1.把所有的改成原来的
+				for(var j = 0; j < ps.length; j++){
+					ps[j].style.background = 'skyblue';
+				}
+
+				// 2.把自己变成想要的
+				this.style.background = 'red';
+			}
+		}
+	</script>
+</body>
+</html>
