@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: rgb(33,44,55);
+		}
+	</style>
+</head>
+<body id='body'>
+	<p>
+		r: <button id='rm'>-</button> <input type="text" value='33' id='rtext'> <button id='rp'>+</button>
+	</p>
+
+	<p>
+		g: <button id='gm'>-</button> <input type="text" value='44' id='gtext'> <button id='gp'>+</button>
+	</p>
+
+	<p>
+		b: <button id='bm'>-</button> <input type="text" value='55' id='btext'> <button id='bp'>+</button>
+	</p>
+
+	<button id='go'>go</button>
+
+	<script>
+		// 获取元素
+		// 按钮
+		var rm = document.getElementById('rm');
+		var rp = document.getElementById('rp');
+		var gm = document.getElementById('gm');
+		var gp = document.getElementById('gp');
+		var bm = document.getElementById('bm');
+		var bp = document.getElementById('bp');
+		var go = document.getElementById('go');
+
+		// 输入框
+		var rtext = document.getElementById('rtext');
+		var gtext = document.getElementById('gtext');
+		var btext = document.getElementById('btext');
+
+		// body
+		var body = document.getElementById('body');
+
+		// 信号量
+		var r = 33;
+		var g = 44;
+		var b = 55;
+
+		// 点击事件
+		// red
+		rm.onclick = function () {
+			// 信号量改变
+			r--;
+			changeColor();
+		}
+		rp.onclick = function () {
+			// 信号量改变
+			r++;
+			changeColor();
+		}
+
+		// green
+		gm.onclick = function () {
+			// 信号量改变
+			g--;
+			changeColor();
+		}
+		gp.onclick = function () {
+			// 信号量改变
+			g++;
+			changeColor();
+		}
+
+		// blue
+		bm.onclick = function () {
+			// 信号量改变
+			b--;
+			changeColor();
+		}
+		bp.onclick = function () {
+			// 信号量改变
+			b++;
+			changeColor();
+		}
+
+		// go
+		go.onclick = function (){
+			// 获取输入的数字
+			r = rtext.value;
+			g = gtext.value;
+			b = btext.value;
+			// 根据获取的数字改变颜色
+			changeColor();
+		}
+
+
+		function changeColor(){
+
+			// 把信号量验收
+			if(r < 0) r = 0;
+			if(g < 0) g = 0;
+			if(b < 0) b = 0;
+			if(r > 255) r = 255;
+			if(g > 255) g = 255;
+			if(b > 255) b = 255;
+
+			// 输入框内容跟随信号改变
+			rtext.value = r;
+			gtext.value = g;
+			btext.value = b;
+
+			// body背景跟随信号量改变
+			body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+		}
+	</script>
+</body>
+</html>
