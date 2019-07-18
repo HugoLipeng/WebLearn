@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+
+	<script src='../javascript/jquery-1.12.3.min.js'></script>
+	<script src='../javascript/jquery.mousewheel.min.js'></script>
+
+	<script>
+		$('.box').mousewheel(function(event){
+			// console.log(event);
+			console.log(event.deltaY);
+		});	
+	</script>
+</body>
+</html>

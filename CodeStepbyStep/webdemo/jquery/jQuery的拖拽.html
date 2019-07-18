@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.box{
+			width: 500px;
+			height: 500px;
+			border: 10px solid skyblue;
+			position: relative;
+		}
+
+		.drag{
+			width: 100px;
+			height: 100px;
+			padding: 10px;
+			border: 10px solid #ddd;
+			margin: 10px;
+			background: orange;
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+	</style>
+
+	<link rel="stylesheet" href="../css/jquery-ui.min.css">
+</head>
+<body>
+	<div class="box">
+		<div class="drag"></div>
+	</div>
+
+	<script src='../javascript/jquery-1.12.3.min.js'></script>
+	<script src='../javascript/jquery-ui.min.js'></script>
+
+	<script>
+		// draggable() 拖拽
+		// axis: 限制拖拽的方向
+		// containment: 拖拽区域
+		// grid: []  步长
+		// drag: function(event, ui) 方法
+		// $('.drag').draggable();
+		$('.drag').draggable({
+			// axis: 'y', 
+			// containment: 'parent',
+			// grid: [100, 100],
+			drag: function(event, ui){
+				// console.log(event,ui);
+				// console.log(ui.position);
+				// console.log(ui.offset);
+			}
+		});
+
+		// console.log($('.drag').offset().top);
+		// console.log($('.drag').offset().left);
+
+		// console.log($('.drag').width()); // width
+		// console.log($('.drag').innerWidth()); // width+padding
+		// console.log($('.drag').outerWidth()); // width+padding+border
+		// console.log($('.drag').outerWidth(true)); // width+padding+border+margin
+		
+	</script>
+
+</body>
+</html>
