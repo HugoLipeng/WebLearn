@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var xiaoming = {
+		// 	name: 'xiaoming',
+		// 	age: 18,
+		// 	gender: 'male',
+		// 	sayHi: function(){
+		// 		console.log('hi, 我叫' + this.name + ',我今年' + this.age + '岁了.');
+		// 	}
+		// }
+
+		// var xiaohong = {
+		// 	name: 'xiaohong',
+		// 	age: 16,
+		// 	gender: 'female',
+		// 	sayHi: function(){
+		// 		console.log('hi, 我叫' + this.name + ',我今年' + this.age + '岁了.');
+		// 	}
+		// }
+
+		// xiaoming.sayHi();
+		// xiaohong.sayHi();
+		// 构造函数  类 
+		function People(name, age, gender){
+			this.name = name;
+			this.age = age;
+			this.gender = gender;
+			this.sayHi = function(){
+				console.log('hi, 我叫' + this.name + ',我今年' + this.age + '岁了.');
+			}
+		}
+		// 1）隐秘的创建一个新的空对象
+		// 2）将这个函数里面的this绑定到刚才创建隐秘新对象上
+		// 3）执行函数体里面的语句
+		// 4）返回这个新的对象
+		var xiaoming = new People('xiaoming', 18, 'male');
+		var xiaohong = new People('xiaohong', 16, 'female');
+		console.log(xiaoming);
+		console.log(xiaohong);
+		xiaoming.sayHi();
+		xiaohong.sayHi();
+
+	</script>
+</body>
+</html>
