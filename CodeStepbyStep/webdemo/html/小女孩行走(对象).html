@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		div{
+			width: 79px;
+			height: 108px;
+			background: url('../images/girl.png') no-repeat;
+			background-position: 0px -216px;
+			position: absolute;
+			/*top: 100px;
+			left: 100px;*/
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+
+		function Girl(left, top){
+			this.left = left;
+			this.top = top;
+
+			// 创建方法
+			this.init = function(){
+				// 创建div节点
+				this.dom = document.createElement('div');
+
+				// 拼接到body
+				document.body.appendChild(this.dom);
+
+				// 设置位置
+				this.dom.style.left = this.left + 'px';
+				this.dom.style.top = this.top + 'px';
+			}
+
+			// 移动方法
+			this.move = function(){
+
+				// 声明信号量
+				var idx = 0; // 0~7
+
+				// 在setInterval内this是window对象,所以在setinterval外部备份this
+				var self = this;
+
+				// 定时器 
+				this.timer = setInterval(function(){
+					// 图片的索引++
+					idx++;
+					if(idx > 7) idx = 0;
+					// div位置移动
+					self.left += 5;
+
+					// 如果移动到1000, 自我销毁
+					if(self.left >= 1000) self.die();
+
+					self.dom.style.left = self.left + 'px';
+					self.dom.style.backgroundPosition = -79*idx + 'px -216px';
+				}, 50);
+
+			}
+
+			// 自我销毁的方法
+			this.die = function(){
+				// 停表
+				clearInterval(this.timer);
+				// 移除节点
+				document.body.removeChild(this.dom);
+			}
+
+			// 调用创建方法
+			this.init();
+
+			// 调用移动方法
+			this.move();
+		}
+
+		// new Girl(100, 100);
+		// new Girl(300, 300);
+
+		setInterval(function(){
+			new Girl(100, parseInt(Math.random() * 500));
+		}, 1000);
+
+	</script>
+	
+</body>
+</html>
