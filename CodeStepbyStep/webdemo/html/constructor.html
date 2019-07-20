@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function People(name, age){
+			this.name = name;
+			this.age = age;
+		}
+
+		People.prototype.sayhi = function (){
+			console.log('hi,我叫' +this.name + ',我今年' + this.age + '岁');
+		}
+
+		People.prototype.name = 'haha';
+
+		console.log(People.prototype.constructor); // People
+
+		var xiaoming = new People('xiaoming',20);
+
+		console.log(xiaoming.constructor); // People
+		console.log(People.prototype.constructor == xiaoming.constructor); // true
+
+		var xiaohong = new People('xiaohong',18);
+		console.log(xiaohong.constructor == xiaoming.constructor); // true
+
+		console.log(xiaoming.name); // xiaoming 自己有的属性直接用自己的
+		xiaoming.sayhi(); // 自己没有的再去原型对象找
+
+	</script>
+</body>
+</html>
