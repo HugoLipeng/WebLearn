@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// a instanceof b: 检测a是否是b的实例对象 (a是否是new b())
+		// function People(name, age){
+		// 	this.name = name;
+		// 	this.age = age;
+		// }
+
+		// var xiaoming = new People('xiaoming', 18);
+		// var xiaohong = {
+		// 	name: 'xiaohong',
+		// 	age: 20
+		// }
+
+		// console.log(xiaoming instanceof People); // true
+		// console.log(xiaohong instanceof People); // false
+
+
+		// 继承当中的instanceof
+		function Dog(){
+
+		}
+
+		function Cat(){
+
+		}
+
+		// 继承  Cat继承Dog
+		Cat.prototype = new Dog();
+
+		var helloKittey = new Cat();
+		console.log(helloKittey.constructor); // Dog
+		console.log(helloKittey instanceof Cat); // true
+		console.log(helloKittey instanceof Dog); // true
+
+
+
+	</script>
+</body>
+</html>
