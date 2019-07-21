@@ -1,14 +1,15 @@
 # Vue
 
-
-基础知识结合已整理文档学习：
-[21-Vue基础](../网络整理/21-Vue基础)  
-
 学习方法：听视频课然后结合相应部分的[Vue官网教程](https://cn.vuejs.org/v2/guide/)细看
 
+### Vue CLI 创建工程
 
-
-
+```
+npm install -g @vue/cli
+vue create my-app
+cd my-app
+npm run serve
+```
 
 
 
