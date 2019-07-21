@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 工厂模式是管理对象的一种设计模式，通过向外提供一个公共方法用于创建对象。把使用对象的部分与创建对象的部分分离，创建对象部分与对象创建前的初始化分离，职责分离。
+
+
+		function Apple(){
+			this.color = 'red';
+		}
+
+		function Orange(){
+			this.color = 'orange';
+		}
+
+		function Banana(){
+			this.color = 'yellow';
+		}
+
+
+		// var app = new Apple();
+		// var ora = new Orange();
+		// var ban = new Banana();
+
+		// console.log(app);
+		// console.log(ora);
+		// console.log(ban);
+
+		var Factory = {
+			create: function(type){
+				var obj = null;
+
+				switch(type){
+					case 'apple':
+						obj = new Apple();
+						break;
+
+					case 'orange':
+						obj = new Orange();
+						break;
+
+					case 'banana':
+						obj = new Banana();
+						break;
+				}
+
+				return obj;
+			}
+		}
+
+		var app = Factory.create('apple');
+		console.log(app);
+
+		var ora = Factory.create('orange');
+		console.log(ora);
+
+		var ban = Factory.create('banana');
+		console.log(ban);
+
+	</script>
+</body>
+</html>
