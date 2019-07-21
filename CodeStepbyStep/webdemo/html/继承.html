@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function People(name, age){
+			this.name = name;
+			this.age = age;
+		}
+
+		function Student(grade, score){
+			this.grade = grade;
+			this.score = score;
+		}
+
+		// 继承  把子类原型指向父类的对象
+		Student.prototype = new People('haha', 18);
+
+		Student.prototype.study = function(){
+			console.log('good good study');
+		}
+
+		People.prototype.eat = function(){
+			console.log('miamia');
+		}
+
+		var xiaoming = new Student('1804', 100);
+		console.log(xiaoming);
+		// 自己原型的方法
+		xiaoming.study();
+		// 父类原型的方法
+		xiaoming.eat();
+
+		console.log(xiaoming.__proto__); // 就是20行new出来的People对象
+		console.log(xiaoming.__proto__.constructor); // People
+		console.log(xiaoming.__proto__.__proto__.constructor); // People
+		console.log(xiaoming.__proto__.__proto__.__proto__.constructor); // Object
+	</script>
+</body>
+</html>
