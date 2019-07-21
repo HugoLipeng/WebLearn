@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// in运算符 :判断属性是否是对象的属性  会在原型链上查找
+		var obj = {
+			name:'xiaoming',
+			age:18
+		}
+
+		obj.__proto__.gender = 'male';
+
+		console.log('name' in obj); // true
+		console.log('age' in obj); // true
+		console.log('gender' in obj); // true
+		console.log('haha' in obj); //false
+
+		for(var k in obj){
+			console.log(k);
+		}
+
+
+	</script>
+</body>
+</html>
