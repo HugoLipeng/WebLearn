@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background: skyblue;	
+			position: absolute;
+			top: 100px;
+			left: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="idbox"></div>
+
+	<script>
+		// 5s时间从(100,100) 移动到(600,700),假定运动间隔为50ms 
+
+		// 总时间有了,时间间隔也有了,运动次数就可以计算出来  
+		// 起点和终点都有,运动的总距离也有,总次数也有,步长可以计算
+		// 在起点的基础上每次加上步长,次数到达总次数,也就到达终点了
+
+		var box = document.getElementById('idbox');
+
+		// {
+		// 	'top':600,
+		// 	'left':700
+		// }
+
+		// 声明起点和终点
+		var startleft = 100;
+		var starttop = 100;
+		var stopleft = 600;
+		var stoptop = 700;
+
+		// 计算总次数
+		var totaltime = 5000;
+		var interval = 50;
+		var maxcount = totaltime / interval;
+
+		// 计算总变化量
+		var changeleft = stopleft - startleft;
+		var changtop = stoptop - starttop;
+
+		// 计算步长
+		var stepleft = changeleft / maxcount;  // 5
+		var steptop = changtop / maxcount;	   // 6
+
+		// 声明count记录运动次数
+		var count = 0;
+		var timer = setInterval(function(){
+			count++;
+			// 每次加上步长
+			startleft += stepleft;
+			starttop += steptop;
+			if(count == maxcount){
+				// 拉终停表
+				startleft = stopleft;
+				starttop = stoptop;
+				clearInterval(timer);
+			}
+			console.log(startleft,starttop);
+			box.style.left = startleft + 'px';
+			box.style.top = starttop + 'px';
+		}, interval);
+	</script>
+</body>
+</html>
