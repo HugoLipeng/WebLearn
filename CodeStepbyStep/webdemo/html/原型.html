@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/*
+		function People(name, age){
+			this.name = name;
+			this.age = age;
+			this.sayhi = function (){
+				console.log('hi,我叫' +this.name + ',我今年' + this.age + '岁');
+			}
+		}
+
+		var xiaoming = new People('xiaoming', 18);
+		var xiaogang = new People('xiaogang', 20);
+
+		console.log(xiaoming.name);
+		console.log(xiaogang.name);
+
+		xiaoming.sayhi();
+		xiaogang.sayhi();
+
+		console.log(xiaogang.sayhi == xiaoming.sayhi); // false
+
+		*/
+
+		function People(name, age){
+			this.name = name;
+			this.age = age;
+		}
+
+		People.prototype.sayhi = function (){
+			console.log('hi,我叫' +this.name + ',我今年' + this.age + '岁');
+		}
+
+		var xiaoming = new People('xiaoming', 18);
+		var xiaogang = new People('xiaogang', 20);
+
+		console.log(xiaoming.age);
+		console.log(xiaogang.age);
+
+		xiaoming.sayhi();
+		xiaogang.sayhi();
+		console.log(xiaoming.sayhi == xiaogang.sayhi); // true
+
+
+	</script>
+</body>
+</html>
