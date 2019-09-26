@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
+
 <body>
 	<script>
-	/*
-		function People(name, age){
-			this.name = name;
-			this.age = age;
-			this.sayhi = function (){
-				console.log('hi,我叫' +this.name + ',我今年' + this.age + '岁');
+
+		// 要点一：自由扩展属性
+		var obj = {}; obj.a = 100;
+		var arr = []; arr.a = 100;
+		function fn() { }
+		fn.a = 100;
+
+		// 要点二：__proto__
+		console.log(obj.__proto__);
+		console.log(arr.__proto__);
+		console.log(fn.__proto__);
+
+		// 要点三：函数有 prototype
+		console.log(fn.prototype)
+
+		// 要点四：引用类型的 __proto__ 属性值指向它的构造函数的 prototype 属性值
+		console.log(obj.__proto__ === Object.prototype)
+		/*
+			function People(name, age){
+				this.name = name;
+				this.age = age;
+				this.sayhi = function (){
+					console.log('hi,我叫' +this.name + ',我今年' + this.age + '岁');
+				}
 			}
-		}
+	
+			var xiaoming = new People('xiaoming', 18);
+			var xiaogang = new People('xiaogang', 20);
+	
+			console.log(xiaoming.name);
+			console.log(xiaogang.name);
+	
+			xiaoming.sayhi();
+			xiaogang.sayhi();
+	
+			console.log(xiaogang.sayhi == xiaoming.sayhi); // false
+	
+			*/
 
-		var xiaoming = new People('xiaoming', 18);
-		var xiaogang = new People('xiaogang', 20);
-
-		console.log(xiaoming.name);
-		console.log(xiaogang.name);
-
-		xiaoming.sayhi();
-		xiaogang.sayhi();
-
-		console.log(xiaogang.sayhi == xiaoming.sayhi); // false
-
-		*/
-
-		function People(name, age){
+		function People(name, age) {
 			this.name = name;
 			this.age = age;
 		}
 
-		People.prototype.sayhi = function (){
-			console.log('hi,我叫' +this.name + ',我今年' + this.age + '岁');
+		People.prototype.sayhi = function () {
+			console.log('hi,我叫' + this.name + ',我今年' + this.age + '岁');
 		}
 
 		var xiaoming = new People('xiaoming', 18);
@@ -50,4 +69,5 @@
 
 	</script>
 </body>
+
 </html>
