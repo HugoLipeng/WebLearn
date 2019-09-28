@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		.box{
+			width: 560px;
+			height: 300px;
+			border: 5px solid gray;
+			margin: 100px auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.m_unit{
+			width: 10000px;
+			height: 300px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.m_unit ul{
+			overflow: hidden;
+		}
+		.m_unit ul li{
+			list-style: none;
+			float: left;
+			width: 560px;
+			height: 300px;
+		}
+
+		/*左右按钮*/
+		.btn span{
+			width: 55px;
+			height: 55px;
+			background: url('../images/dog/btnL.png');
+			position: absolute;
+			border-radius:  10px;
+			top: 50%;
+			margin-top: -28px;
+		}
+
+		.btn span.right{
+			background: url('../images/dog/btnR.png');
+			right: 0;
+		}
+
+		/*小圆点*/
+		.circle ul li{
+			list-style: none;
+			float: left;
+			width: 20px;
+			height: 20px;
+			background: orange;
+			margin-right: 10px;
+			border-radius: 50%;
+		}
+
+		.circle ul{
+			overflow: hidden;
+		}
+
+		.circle{
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+
+		.circle ul li.current{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id='box'>
+		<div class="m_unit" id='m_unit'>
+			<ul>
+				<li><a href="#"><img src="../images/dog/0.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/dog/1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/dog/2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/dog/3.jpg" alt=""></a></li>
+				<li><a href="#"><img src="../images/dog/4.jpg" alt=""></a></li>
+			</ul>
+		</div>
+
+		<div class="btn">
+			<span class='left' id='leftBtn'></span>
+			<span class='right' id='rightBtn'></span>
+		</div>
+
+		<div class="circle" id='circle'>
+			<ul>
+				<li class='current'></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+
+	<script src='../javascript/jquery-1.12.3.min.js'></script>
+
+	<script>
+
+		// 获取图片的长度
+		var imgLength = $('#m_unit ul li').length;
+
+		// 拼接假0
+		$('#m_unit ul').append($('#m_unit ul li').eq(0).clone());
+
+		// 信号量
+		var idx = 0;
+
+		// 自动轮播
+		var timer = setInterval(rightBtnHandler,2000);
+
+		// 鼠标进入box
+		$('#box').mouseenter(function() {
+			clearInterval(timer);
+		});
+
+		// 鼠标离开box
+		$('#box').mouseleave(function() {
+			timer = setInterval(rightBtnHandler,2000);
+		});
+
+		// 右按钮点击事件
+		$('#rightBtn').click(rightBtnHandler);
+		function rightBtnHandler(){
+			idx++;
+			$('#m_unit').animate({'left': -560 * idx}, 1000, function(){
+				if(idx > imgLength-1){
+					idx = 0;
+					// $('#m_unit').css('left','0px');
+					$(this).css('left', '0px');
+				}
+			});
+
+			circleChange();
+		}
+
+
+		// 左按钮点击事件
+		$('#leftBtn').click(function(){
+			idx--;
+
+			if(idx < 0){
+				idx = imgLength - 1;
+				$('#m_unit').css('left', -560 * imgLength);
+			}
+
+			$('#m_unit').animate({'left': -560 * idx}, 1000);
+
+			circleChange();
+		});
+
+		// 小圆点点击事件
+		$('#circle ul li').each(function(i){
+			// console.log(i);
+			$(this).click(function(){
+				idx = i;
+				$('#m_unit').animate({'left': -560 * idx}, 1000);
+				circleChange();
+			});
+		});
+
+		// 小圆点更改
+		function circleChange(){
+			var idxx = idx;
+			if(idxx > imgLength-1) idxx = 0;
+			// 排他
+			$('#circle ul li').eq(idxx).css('background','red').siblings().css('background','orange');
+		}
+
+	</script>
+
+	<!--<script src='js/animate-3.0.js'></script>-->
+	<script>
+	/*
+		// 获取轮播图
+		var box = document.getElementById('box');
+		// 获取移动单元
+		var m_unit = document.getElementById('m_unit');
+		// 获取图片ul
+		var imageUl = m_unit.getElementsByTagName('ul')[0];
+		// 获取图片li数组
+		var imgLis = imageUl.getElementsByTagName('li');
+
+		// 获取图片li的个数
+		var imgLength = imgLis.length;
+
+		// 获取左右按钮
+		var leftBtn = document.getElementById('leftBtn');
+		var rightBtn = document.getElementById('rightBtn');
+		// 获取小圆点数组 
+		var circleLis = document.getElementById('circle').getElementsByTagName('li');
+
+		// 拼接第0张图片
+		imageUl.appendChild(imgLis[0].cloneNode(true));
+
+		// 声明信号量idx(0~4,5是临时演员)
+		var idx = 0;
+
+		// 默认滚动
+		var timer = setInterval(rightBtnHandler, 2000);
+
+		// 鼠标进入box,停止滚动
+		box.onmouseover = function(){
+			clearInterval(timer);
+		}
+
+		// 鼠标离开box,继续滚动
+		box.onmouseout = function(){
+			timer = setInterval(rightBtnHandler, 2000);
+		}
+
+
+		// 右按钮点击事件
+		rightBtn.onclick = rightBtnHandler;
+		function rightBtnHandler(){
+			// 判断m_unit是否在运动,函数节流
+			if(m_unit.isanimated) return;
+			// 信号量++
+			idx++;
+			// console.log(idx);
+			// 根据信号量移动m_unit
+			animate(m_unit,{'left': -560 * idx}, 1000, 'BounceEaseOut',function(){
+				// 当假的0完全动画完成后,瞬间移动到初始位置,同时把索引变为0
+				if(idx > imgLength-1){
+					idx = 0;
+					m_unit.style.left = '0px';
+					// console.log(idx);
+				}
+			});
+
+			// 更改小圆点
+			circleChange();
+		}
+
+		// 左按钮点击事件
+		leftBtn.onclick = function(){
+			// 节流
+			if(m_unit.isanimated) return;
+
+			// 索引--
+			idx--;
+
+			// 运动之前判断,如果小于0,说明从0到4的切换,m_unit首先移动到假0的位置,然后再把4进行动画切换
+			if(idx < 0){
+				idx = imgLength - 1;
+				m_unit.style.left = -560 * imgLength + 'px';
+			}
+
+			// 根据idx切换图片
+			animate(m_unit,{'left': -560 * idx}, 1000, 'BounceEaseOut'); 
+
+			// 更改小圆点
+			circleChange();
+		}
+
+		// 小圆点的监听事件
+		for(var i = 0; i < circleLis.length; i++){
+
+			// 绑定自定义属性规避闭包
+			circleLis[i].idxx = i;
+
+			circleLis[i].onclick = function(){
+				// 把点击的小圆点的索引给idx
+				idx = this.idxx;
+				// console.log(idx);
+
+				// 根据idx切换图片
+				animate(m_unit,{'left': -560 * idx}, 1000, 'BounceEaseOut'); 
+
+				// 更改小圆点
+				circleChange();
+			}
+		}
+
+		// 小圆点的切换
+		function circleChange(){
+			// 根据idx进行小圆点的切换(排他)
+			// console.log(idx);
+			// if(idx == circleLis.length) idx = 0; // 我们使用idx,不要去更改idx
+
+			// 使用变量circleIdx接收idx
+			var circleIdx = idx;
+			if(circleIdx == circleLis.length) circleIdx = 0;
+
+			// 把所有的小圆点的class去掉
+			for(var i = 0; i < circleLis.length; i++){
+				circleLis[i].className = '';
+			}
+
+			// 把circleIdx对应的小圆点添加current类
+			circleLis[circleIdx].className = 'current';
+
+		}
+
+		*/
+
+	</script>
+</body>
+</html>
