@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片轮播</title>
+</head>
+
+<body>
+    <button id='preBtn' onclick="changeImage(0);">上一张</button>
+    <img src="../image/lunbo/1.jpeg" alt="" id='tutu'>
+    <button id='nextBtn' onclick="changeImage(1);">下一张</button>
+</body>
+
+<script>
+    var imageNo = 0;
+    var imageArr = ["../image/lunbo/1.jpeg",
+                    "../image/lunbo/2.jpeg",
+                    "../image/lunbo/3.jpeg",
+                    "../image/lunbo/4.jpeg",
+                    "../image/lunbo/5.jpeg"];
+    var intervalNow = null;
+    //自动播放图片
+    function playImage() {
+        intervalNow = setInterval(function () {
+            showImage(imageNo);
+            imageNo++;
+            imageNo = imageNo%imageArr.length;
+        },2000);
+    }
+    //显示当前图片
+    function showImage() {
+        document.getElementById("tutu").src = imageArr[imageNo];
+        //document.getElementById("tutu").src = "../image/lunbo/"+number.toString();+".jpeg";
+    }
+
+    //上下一张按钮
+    function changeImage(num){
+        stopPlayImage();
+        if(num == 0){
+            imageNo = imageNo + imageArr.length
+            imageNo--;
+            imageNo = imageNo%imageArr.length;
+        }
+        if(num == 1){
+            imageNo = imageNo + imageArr.length
+            imageNo++;
+            imageNo = imageNo%imageArr.length;
+        }
+        showImage();
+        playImage();
+    }
+
+    //暂停播放图片
+    function stopPlayImage(){
+        clearInterval(intervalNow);
+    }
+
+    playImage();
+</script>
+
+</html>
