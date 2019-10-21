@@ -28,3 +28,5 @@ web learning Doc and Code
 <https://zh.javascript.info/>  
 
 <https://www.cnblogs.com/yangzhou33/>
+
+[一个简单的国旗头像制作 Demo 小程序](https://github.com/msunh1997/Avatar)
