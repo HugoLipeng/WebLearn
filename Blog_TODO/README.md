@@ -14,6 +14,10 @@
 [CSS样式大全](https://lhammer.cn/You-need-to-know-css/#/)   
 [《css手册》 查缺补漏](http://css.doyoe.com/)  
 
+https://viktorwong.github.io/Full-Stack-Library/
+
+http://doc.liangxinghua.com/vue-family/1.html
+
 
 
 [国服第一切图仔](https://github.com/chokcoco?tab=repositories)
@@ -28,4 +32,19 @@
 
 <https://www.cnblogs.com/yangzhou33/>
 
+[一个简单的国旗头像制作 Demo 小程序](https://github.com/msunh1997/Avatar)
+
 https://github.com/XiaodongTong/blog
+
+[《JavaScript 语言入门教程》](https://wangdoc.com/javascript/)
+
+[ECMAScript 6 入门](http://es6.ruanyifeng.com/)
+
+
+
+
+
+
+
+
+
