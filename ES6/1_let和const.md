@@ -8,7 +8,7 @@
 }
 console.log(a);   //这里不可以使用
 ```
-2. 使用let声明的变量，在欲解析的时候不会被提升。
+2. 使用let声明的变量，在预解析的时候不会被提升。
 ```
 //使用var声明变量时,可以这样写
 console.log(a); // 此时输出  undefined
@@ -41,7 +41,7 @@ let a;
     <button>3</button>
     <button>4</button>
 </div>
-//通过dom操作获取buttion
+//通过dom操作获取button
 var btns = document.querySelectAll('button');
 ```
 如果这样写,每次点击都会打印3.
@@ -88,7 +88,7 @@ for(let i=0; i<btns.length; i++){
 用来声明一个常量，可以简单理解成一个不可以变化的常量   
 和let类似，const同样具备let的三种特点。
 1.  所声明的常量在所在代码块中有效
-2.  在欲解析时候不会被提升，需要先定义后使用。
+2.  在预解析时候不会被提升，需要先定义后使用。
 3.  不允许同一作用域下，声明相同的常量
 ---
 4.  使用const声明常量的时，必须赋值
