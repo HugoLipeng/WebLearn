@@ -13,6 +13,12 @@ npm run serve
 
 
 
+
+
+## 源码分析：
+
+https://nlrx-wjc.github.io/Learn-Vue-Source-Code/
+
 ## 参考：
 https://github.com/1049759078/travel.git  
 [Vue2.0去哪网实战笔记](https://www.jianshu.com/p/a0d764bbc1ae)  
